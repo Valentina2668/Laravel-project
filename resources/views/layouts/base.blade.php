@@ -21,7 +21,7 @@
                     </x-nav-link>
                 </li>
                 <li>
-                    <x-nav-link href="/catalog" :active="request()->routeIs('catalog')">
+                    <x-nav-link href="/products" :active="request()->routeIs('products')">
                         Catalog
                     </x-nav-link>
                 </li>

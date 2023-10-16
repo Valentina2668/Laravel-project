@@ -32,4 +32,5 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 //вот этот путь всегда в конце последней строчкой. 
+Route::get('products', [Controllers\ProductController::class,'getIndex']);
 Route::get('{url}', [Controllers\BaseController::class,'getIndex']);

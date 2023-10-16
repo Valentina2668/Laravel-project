@@ -32,7 +32,7 @@ class MaintextResource extends Resource
                 TextInput::make('name'),
                 TextInput::make('url'),
                 Textarea::make('body'),
-                // RichEditor::make('body'),
+                // RichEditor::make('body'), если много чего-то надо писать вместо textarea
                 Select::make('status')
                     ->options([
                         'name' => 'Name',
