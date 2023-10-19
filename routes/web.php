@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,4 +34,6 @@ require __DIR__.'/auth.php';
 
 //вот этот путь всегда в конце последней строчкой. 
 Route::get('products', [Controllers\ProductController::class,'getIndex']);
+Route::get('product/{product}', [Controllers\ProductController::class,'getOne']);//маршрут для одного товара
+
 Route::get('{url}', [Controllers\BaseController::class,'getIndex']);
