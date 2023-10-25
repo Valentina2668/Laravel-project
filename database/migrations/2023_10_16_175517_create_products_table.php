@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('price')->nullable();
             $table->string('discount')->nullable();
             $table->string('picture')->nullable();
-            $table->unsignedInteger('catalog-id')->nullable();
+            $table->unsignedInteger('catalog_id')->nullable();
+
             $table->timestamps();
         });
     }

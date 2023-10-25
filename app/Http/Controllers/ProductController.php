@@ -8,7 +8,8 @@ Use App\Models\Product;
 class ProductController extends Controller
 {
     public function getIndex(){
-        return view('products');
+        $products = Product::all();
+        return view('products', compact('products'));
     }
     public function getOne($product){
         return view ('product', compact('product'));
