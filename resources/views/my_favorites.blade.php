@@ -1,23 +1,23 @@
 @extends('layouts.base')
 @section('content')
-
 <section class="products">
     <section class="heading">
-        <h1>products</h1>
+        <h1>Favorites</h1>
         <p><a href="/">home</a>>><a href={{asset('products')}}>products</a> >> for men </p>
+        
     </section>
     <h1 class="title">featured products</h1>
     <div class="box-container">
-        @foreach($products as $product)
+        @foreach($favorites as $favorite)
         <div class="box">
-            {{$product->name}}
+            {{$favorite->product->name}}
             <div class="image">
                 <div class="icons">
                     <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="{{asset('product/' .$product->id.'/add_to_favorites')}}" class="fas fa-heart"></a>
-                    <a href="{{asset('product/'.$product->id)}}" class="fas fa-eye"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="{{asset('product/'.$favorite->product->id)}}" class="fas fa-eye"></a>
                 </div>
-                <img src="/storage/{{$product->picture}}" alt="">
+                <img src="/storage/{{$favorite->product->picture}}" alt="">
             </div>
             <div class="content">
                 <h3>premium glasses</h3>
@@ -36,5 +36,4 @@
     </div>
 
 </section>
-
 @endsection

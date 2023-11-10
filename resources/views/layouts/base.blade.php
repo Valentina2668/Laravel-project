@@ -35,6 +35,11 @@
                        Blogs
                     </x-nav-link>
                 </li>
+                <li>
+                    <x-nav-link href="{{asset('favorites')}}">
+                       Favorites
+                    </x-nav-link>
+                </li>
                 <!-- <li><a href="#">pages +</a>
                     <ul>
                         <li><a href="about.html">about</a></li>

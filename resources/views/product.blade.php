@@ -1,44 +1,34 @@
 @extends('layouts.base')
 @section('content')
 <section class="products">
-    <h1 class="title">featured products</h1>
-
-    <div class="shoes-container">
-        <div class="img-and-descr">
-            <div class="images">
-                <img src="http://mistillas.cl/wp-content/uploads/2018/04/Nike-Epic-React-Flyknit-%E2%80%9CPearl-Pink%E2%80%9D-01.jpg" />
+    <section class="heading">
+        <h1>products</h1>
+        <p><a href="/">home</a>>><a href={{asset('products')}}>products</a> >> for men </p>
+    </section>
+    <h1 class="title">Featured product</h1>
+    <div class="item-container">
+        <div class="image-and-description">
+            <div class="item-image">
+                <img src="/storage/{{$product->picture}}" alt="">
             </div>
-            <div class="shoes-description">
-                <p>Women's Running Shoe</p>
-                <h1>Nike Epic React Flyknit</h1>
-                <h2>$150</h2>
-                <p class="desc">The Nike Epic React Flyknit foam cushioning is responsive yet light-weight, durable
-                    yet
-                    soft. This creates a sensation that not only enhances the feeling of moving forward, but makes
-                    running feel fun, too.</p>
+            <div class="item-description">
+                <h1>{{$product->name}} </h1>
+                <a href="#" class="fas fa-heart"></a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam laudantium
+                    rem ea nostrum suscipit, iure excepturi inventore consectetur provident tempore magnam molestiae
+                    obcaecati eveniet ex dolores labore deserunt cumque eum.</p>
             </div>
-
         </div>
-        <div class="size-and-order">
-            <div class="size-description">
-                <p class="pick">choose size</p>
-                <div class="shoes-sizes">
-                    <div class="size">5</div>
-                    <div class="size">6</div>
-                    <div class="size">7</div>
-                    <div class="size">8</div>
-                    <div class="size">9</div>
-                    <div class="size">10</div>
-                    <div class="size">11</div>
-                    <div class="size">12</div>
-                </div>
+        <div class="size-and-buy">
+           
+            <div class="item-size"> 
+                @foreach($sizes as $one)
+                <a href="#" class="btn">{{$one}}</a>
+                @endforeach
             </div>
-            <div class="buttons">
-                <button class="add">Add to Cart</button>
-                <button class="like"><span>♥</span></button>
-            </div>
-
+            <a href="#" class="btn">buy now</a>
         </div>
+
     </div>
 </section>
 

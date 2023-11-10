@@ -11,7 +11,9 @@ class ProductController extends Controller
         $products = Product::all();
         return view('products', compact('products'));
     }
-    public function getOne($product){
-        return view ('product', compact('product'));
+    public function getOne(Product $product){
+        $sizes=explode(',',$product->size);
+        // dd ($product);
+        return view ('product', compact('product', 'sizes'));
     }
 }
