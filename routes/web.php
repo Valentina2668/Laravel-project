@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('product/{product}/add_to_favorites', [Controllers\FavoriteController::class,'addProductToFavorite']) ->name('add_product_to_favorite');
+    Route::get('product/{product}/remove_from_favorites', [Controllers\FavoriteController::class,'removeProductFromFavorite']) ->name('remove_product_from_favorite');
     Route::get('favorites', [Controllers\FavoriteController::class, 'showMy'])->name('my_favorites');
 });
 

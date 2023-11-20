@@ -14,7 +14,7 @@
             <div class="image">
                 <div class="icons">
                     <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
+                    <a href="{{asset('product/' .$favorite->product->id.'/remove_from_favorites')}}" class="fas fa-window-close"></a>
                     <a href="{{asset('product/'.$favorite->product->id)}}" class="fas fa-eye"></a>
                 </div>
                 <img src="/storage/{{$favorite->product->picture}}" alt="">

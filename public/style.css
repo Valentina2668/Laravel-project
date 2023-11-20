@@ -693,6 +693,12 @@ section {
 .credits span {
   color: #e84393;
 }
+.item-description i{
+  font-size: 2rem;
+  color: #e84393;
+
+}
+
 
 @media (max-width: 1200px) {
   html {

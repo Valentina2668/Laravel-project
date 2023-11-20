@@ -25,6 +25,8 @@ class FavoriteController extends Controller
     //конструктор запроса 
     // SELECT * FROM Favorites WHERE product_id = '1' AND user_id ='1'
     // В ларавел можно много раз написать Where вместо WHERE и далее AND и JOIN 
+    return redirect()->back();
+
     }
     public function showMy(){
     $favorites = Favorite::where('user_id', Auth::user()->id)
