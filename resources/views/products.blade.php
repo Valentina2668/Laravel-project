@@ -28,7 +28,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <div class="price">$20.00<span>$25.00</span></div>
+                <div class="price">{{$product->price}}<span>$25.00</span></div>
             </div>
         </div>
         @endforeach
