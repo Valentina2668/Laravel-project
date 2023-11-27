@@ -38,7 +38,7 @@ class ProductResource extends Resource
                 TextInput::make('name')->required(),
                 Select::make('catalog_id')->options($catalogs)->required(),//сделали поле catalog id айди и добавили options из модели Cdtdlog
                 TextInput::make('price')->required(),
-                TextInput::make('discount')->required(),
+                TextInput::make('discount'),
                 TextInput::make('size')->required(),
                 TextInput::make('status'),
                 RichEditor::make('body')->columnSpan('full'),

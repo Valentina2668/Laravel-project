@@ -3,22 +3,22 @@
 <section class="home">
     <div class="slide active" style="background: url(images/home-bg-1.jpg) no-repeat;">
         <div class="content">
-            <span> protect your eyes </span>
-            <h3>upto 50% off</h3>
+            <span> up to 50% off </span>
+            <h3>Fly Up</h3>
             <a href="#" class="btn">shop now</a>
         </div>
     </div>
     <div class="slide" style="background: url(images/home-bg-2.jpg) no-repeat;">
         <div class="content">
-            <span> protect your eyes </span>
-            <h3>up to 50% off</h3>
+            <span> up to 50% off  </span>
+            <h3>Be Invincible</h3>
             <a href="#" class="btn">shop now</a>
         </div>
     </div>
     <div class="slide" style="background: url(images/home-bg-3.jpg) no-repeat;">
         <div class="content">
-            <span> protect your eyes </span>
-            <h3>up to 50% off</h3>
+            <span> up to 50% off </span>
+            <h3>Run fast</h3>
             <a href="#" class="btn">shop now</a>
         </div>
     </div>

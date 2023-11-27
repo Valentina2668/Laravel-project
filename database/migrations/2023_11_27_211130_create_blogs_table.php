@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('description')->nullable(); 
             //string contains 255 symbls, not more
             $table->text('content')->nullable();
+            $table->string('picture')->nullable();
             $table->unsignedInteger('user_id'); 
             $table->timestamps();
         });

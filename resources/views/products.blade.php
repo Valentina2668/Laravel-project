@@ -10,7 +10,9 @@
     <div class="box-container">
         @foreach($products as $product)
         <div class="box">
-            {{$product->name}}
+            <h1>
+             {{$product->name}}   
+            </h1>
             <div class="image">
                 <div class="icons">
                     <a href="#" class="fas fa-shopping-cart"></a>
@@ -20,7 +22,7 @@
                 <img src="/storage/{{$product->picture}}" alt="">
             </div>
             <div class="content">
-                <h3>premium glasses</h3>
+                <h3>{{$product->status}}</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -28,7 +30,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <div class="price">{{$product->price}}<span>$25.00</span></div>
+                <div class="price">{{$product->price}}<span>{{$product->discount}}</span></div>
             </div>
         </div>
         @endforeach

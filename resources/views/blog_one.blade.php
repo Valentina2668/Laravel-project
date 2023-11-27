@@ -15,7 +15,7 @@
                 <p>{!!$blog->content!!}</p>
                 <div class="icons">
                     <a href="#"><i class="fas fa-clock"></i>Date {{optional ($blog->created_at)->diffForHumans()}}</a>
-                    <a href="#"><i class="fas fa-user"></i>By user{{$blog->user->name}}</a>
+                    <a href="#"><i class="fas fa-user"></i>By {{$blog->user->name}}</a>
 
                 </div>
             </div>
