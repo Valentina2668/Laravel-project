@@ -23,13 +23,6 @@
             </div>
             <div class="content">
                 <h3>{{$product->status}}</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
                 <div class="price">{{$product->price}}<span>{{$product->discount}}</span></div>
             </div>
         </div>

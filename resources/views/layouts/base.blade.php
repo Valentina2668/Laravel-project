@@ -17,27 +17,27 @@
         <nav class="navbar">
             <ul>
                 <li><x-nav-link href="/">
-                        Home
+                       <h2>Home</h2> 
                     </x-nav-link>
                 </li>
                 <li>
                     <x-nav-link href="/products" :active="request()->routeIs('products')">
-                        Catalog
+                        <h2>Catalog</h2>
                     </x-nav-link>
                 </li>
                 <li>
                     <x-nav-link href="/about" :active="request()->routeIs('about')">
-                        About
+                        <h2>About</h2>
                     </x-nav-link>
                 </li>
                 <li>
                     <x-nav-link href="/blog" :active="request()->routeIs('about')">
-                       Blogs
+                       <h2>Blogs</h2>
                     </x-nav-link>
                 </li>
                 <li>
                     <x-nav-link href="{{asset('favorites')}}">
-                       Favorites
+                       <h2>Favorites</h2>
                     </x-nav-link>
                 </li>
                 <!-- <li><a href="#">pages +</a>
@@ -46,17 +46,17 @@
                         <li><a href="blogs.html">blogs</a></li>
                     </ul>
                 </li> -->
-                <li><a href="contact.html">contact</a></li>
-                <li><a href="#">account +</a>
+                <li><a href="contact.html"><h2>Contacts</h2></a></li>
+                <li><a href="#"><h2>account +</h2></a>
                     <ul>
                         @if(auth()->guest())
-                        <li><a href="/login">login</a></li>
-                        <li><a href="/register">register</a></li>
+                        <li><a href="/login"><h2>login</h2></a></li>
+                        <li><a href="/register"><h2>register</h2></a></li>
                         @else
                         <li>
 
                             <a href="{{asset('dashboard')}}">
-                                {{ __('Profile') }}
+                                <h2>{{ __('Profile') }}</h2>
                             </a>
                         <li>
                             <!-- Authentication -->
@@ -65,7 +65,7 @@
 
                                 <x-nav-link :href="route('logout')" onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                    {{ __('Log Out') }}
+                                    <h2>{{ __('Log Out') }}</h2>
                                 </x-nav-link>
                             </form>
                         </li>

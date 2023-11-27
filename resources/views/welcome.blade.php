@@ -29,8 +29,8 @@
     <div class="box">
         <img src="images/banner-1.jpg">
         <div class="content">
-            <span>special offer</span>
-            <h3>up to 50% off</h3>
+            <span>New Arrivals</span>
+            <h3>For women</h3>
             <a href="#" class="btn">shop now</a>
         </div>
     </div>
@@ -38,8 +38,8 @@
     <div class="box">
         <img src="images/banner-2.jpg">
         <div class="content">
-            <span>special offer</span>
-            <h3>up to 50% off</h3>
+            <span>New Arrivals</span>
+            <h3>SALE</h3>
             <a href="#" class="btn">shop now</a>
         </div>
     </div>
@@ -47,8 +47,8 @@
     <div class="box">
         <img src="images/banner-3.jpg">
         <div class="content">
-            <span>special offer</span>
-            <h3>up to 50% off</h3>
+            <span>New Arrivals</span>
+            <h3>For Men</h3>
             <a href="#" class="btn">shop now</a>
         </div>
     </div>
