@@ -40,7 +40,7 @@
         <div class="content">
             <span>New Arrivals</span>
             <h3>SALE</h3>
-            <a href="#" class="btn">shop now</a>
+            <a href="/feed" class="btn">shop now</a>
         </div>
     </div>
 
