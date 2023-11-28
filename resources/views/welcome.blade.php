@@ -40,7 +40,7 @@
         <div class="content">
             <span>New Arrivals</span>
             <h3>SALE</h3>
-            <a href="/feed" class="btn">shop now</a>
+            <a href="#" class="btn">shop now</a>
         </div>
     </div>
 
@@ -50,6 +50,14 @@
             <span>New Arrivals</span>
             <h3>For Men</h3>
             <a href="#" class="btn">shop now</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src=".\images\blog-2.jpg">
+        <div class="content">
+            <span>New Arrivals</span>
+            <h3>New Arrivals</h3>
+            <a href="/feed" class="btn">shop now</a>
         </div>
     </div>
 </section>

@@ -3,7 +3,7 @@
 <section class="products">
     <section class="heading">
         <h1>products</h1>
-        <p><a href="/">home</a>>><a href={{asset('products')}}>products</a> >> for men </p>
+        <p><a href="/">home</a>>><a href={{asset('products')}}>products</a> </p>
     </section>
     <h1 class="title">Featured product</h1>
     <div class="item-container">

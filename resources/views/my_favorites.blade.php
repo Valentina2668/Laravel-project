@@ -4,7 +4,7 @@
     <section class="heading">
         <h1>Favorites</h1>
         <p><a href="/">home</a>>><a href={{asset('products')}}>products</a> >> favorites </p>
-        
+
     </section>
     <h1 class="title">featured products</h1>
     <div class="box-container">
@@ -20,15 +20,8 @@
                 <img src="/storage/{{$favorite->product->picture}}" alt="">
             </div>
             <div class="content">
-                <h3>premium glasses</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">$20.00<span>$25.00</span></div>
+                <h3>{{$favorite->product->status}}</h3>
+                <div class="price">{{$favorite->product->price}}<span>{{$favorite->product->discount}}</span></div>
             </div>
         </div>
         @endforeach
