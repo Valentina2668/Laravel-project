@@ -5,11 +5,31 @@
     <form class="p-2" action="{{asset('products')}}">
         <div class="grid grid-cols-2">
             <div class="">
+
+                <select name='catalog'>
+                    <option value=0> Choose from the catalog
+                    </option>
+                    <option value=1>For men
+                    </option>
+                    <option value=2>For women
+                    </option>
+                </select>
+                <select name="size">
+                    <option value="">
+                        Choose you size
+                    </option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+
+                </select>
+                <input type="checkbox" name='sale' value=1>
                 <div x-data="{ price: {{(request()->price_min)? request()->price_min:$min_price}} }" class="w-full">
                     <label for="price" class="font-bold text-gray-700" x-text="`от`  + price">{{$min_price}}</label>
                     <input type="range" min="{{$min_price}}" name="price_min" max="{{$avg_price}}" x-model="price" class="w-full h-2 bg-blue-100 appearance-none" />
                 </div>
             </div>
+
             <div>
                 <div x-data="{ price: {{(request()->price_max)? request()->price_max:$max_price}} }" class="w-full">
                     <label for="price" class="font-bold text-gray-700 block text-right" x-text="`до`  + price">{{$max_price}}</label>

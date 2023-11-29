@@ -14,9 +14,26 @@ class ProductFilter extends ModelFilter
     {
         return $this->where('price', '>', $value);
     }
-    public function priceMax($value){
+    public function priceMax($value)
+    {
         return $this->where('price',  '<=', $value);
     }
+    public function catalog($value)
+    {
+        if ($value !=0) {
+            return $this->where('catalog_id', $value);
+        }
+    }
+    public function sale($value)
+    {
+        if ($value == 1) {
+            return $this->whereNotNull('discount');
+        }
+    }
+    public function size($value){
+        return $this->where ('size', 'LIKE', '%'.$value.'%');
+    }
+
 
     /**
      * Related Models that have ModelFilters as well as the method on the ModelFilter

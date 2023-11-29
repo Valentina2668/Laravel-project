@@ -39,6 +39,7 @@ require __DIR__ . '/auth.php';
 //вот этот путь всегда в конце последней строчкой. 
 Route::get('products', [Controllers\ProductController::class, 'getIndex']);
 Route::get('product/{product}', [Controllers\ProductController::class, 'getOne']); //маршрут для одного товара
+Route::get('allproducts', [Controllers\ProductController::class, 'getAll']);
 Route::get('blog', [Controllers\BlogController::class, 'getIndex']);
 Route::get('blog/{blog}', [Controllers\BlogController::class, 'getOne']);
 Route::get('{url}', [Controllers\BaseController::class, 'getIndex']);

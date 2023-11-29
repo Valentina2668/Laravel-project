@@ -7,9 +7,10 @@
     <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="/style.css">
+    <script src="/scripts.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="/scripts.js" defer></script>
+
 </head>
 
 <body>
@@ -19,7 +20,7 @@
         <nav class="navbar">
             <ul>
                 <li><x-nav-link href="/">
-                       <h2>Home</h2> 
+                        <h2>Home</h2>
                     </x-nav-link>
                 </li>
                 <li>
@@ -34,12 +35,12 @@
                 </li>
                 <li>
                     <x-nav-link href="/blog" :active="request()->routeIs('about')">
-                       <h2>Blogs</h2>
+                        <h2>Blogs</h2>
                     </x-nav-link>
                 </li>
                 <li>
                     <x-nav-link href="{{asset('favorites')}}">
-                       <h2>Favorites</h2>
+                        <h2>Favorites</h2>
                     </x-nav-link>
                 </li>
                 <!-- <li><a href="#">pages +</a>
@@ -48,44 +49,49 @@
                         <li><a href="blogs.html">blogs</a></li>
                     </ul>
                 </li> -->
-                <li><a href="contact.html"><h2>Contacts</h2></a></li>
-                <li><a href="#"><h2>account +</h2></a>
-                    <ul>
-                        @if(auth()->guest())
-                        <li><a href="/login"><h2>login</h2></a></li>
-                        <li><a href="/register"><h2>register</h2></a></li>
-                        @else
-                        <li>
+                <li><a href="contact.html">
+                        <h2>Contacts</h2>
+                    </a></li>
 
-                            <a href="{{asset('dashboard')}}">
-                                <h2>{{ __('Profile') }}</h2>
-                            </a>
-                        <li>
-                            <!-- Authentication -->
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
+                <li>
+                    @if(auth()->guest())
+                <li><a href="/login">
+                        <h2>login</h2>
+                    </a></li>
+                <li><a href="/register">
+                        <h2>register</h2>
+                    </a></li>
+                @else
+                <li>
 
-                                <x-nav-link :href="route('logout')" onclick="event.preventDefault();
+                    <a href="{{asset('dashboard')}}">
+                        <h2>{{ __('Profile') }}</h2>
+                    </a>
+                <li>
+                    <!-- Authentication -->
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+                        <x-nav-link :href="route('logout')" onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                    <h2>{{ __('Log Out') }}</h2>
-                                </x-nav-link>
-                            </form>
-                        </li>
+                            <h2>{{ __('Log Out') }}</h2>
+                        </x-nav-link>
+                    </form>
                 </li>
+
                 @endif
-
-
-            </ul>
-            </li>
+                </li>
             </ul>
         </nav>
+
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
             <div id="search-btn" class="fas fa-search"></div>
             <a href="cart.html" class="fas fa-shopping-cart"></a>
         </div>
-        <form action="" class="search-form">
-            <input type="search" name="" placeholder="search here..." id="search-box">
+        <form action="{{asset('allproducts')}}" class="search-form">
+            @csrf
+            <input type="search" name="search" placeholder="search here..." id="search-box">
             <label for="search-box" class="fas fa-search"></label>
         </form>
     </header>
