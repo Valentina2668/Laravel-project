@@ -1,13 +1,12 @@
 @extends('layouts.base')
 @section('content')
-<section class="blogs">
-    <h1 class="title">our daily posts</h1>
+<section class="blog">
+    <!-- <h1 class="title">our daily posts</h1> -->
+    <a href="/blog" class="btn">back</a>
     <div class="box-container">
-        
         <div class="box">
-        <a href="{{asset('blog/'.$blog->id)}}" class="btn">back</a>
             <div class="image">
-                <img src="images/blog-1.jpg" alt="">
+                <img src="{{asset('/storage/'.$blog->picture)}}" alt="">
             </div>
             <div class="content">
                 <h3>{{$blog->name}}</h3>

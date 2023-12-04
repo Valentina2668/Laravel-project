@@ -4,19 +4,19 @@
     <div class="slide active" style="background: url(images/home-bg-1.jpg) no-repeat;">
         <div class="content">
             <h3>Fly Up</h3>
-            <a href="#" class="btn">shop now</a>
+            <a href="/products" class="btn">shop now</a>
         </div>
     </div>
     <div class="slide" style="background: url(images/home-bg-2.jpg) no-repeat;">
         <div class="content">
             <h3>Be Invincible</h3>
-            <a href="#" class="btn">shop now</a>
+            <a href="/products" class="btn">shop now</a>
         </div>
     </div>
     <div class="slide" style="background: url(images/home-bg-3.jpg) no-repeat;">
         <div class="content">
             <h3>Run fast</h3>
-            <a href="#" class="btn">shop now</a>
+            <a href="/products" class="btn">shop now</a>
         </div>
     </div>
     <div id="next-slide" onclick="next()" class="fas fa-angle-right"></div>

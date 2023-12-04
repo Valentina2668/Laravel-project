@@ -266,6 +266,14 @@ section {
   font-size: 1.5rem;
 }
 
+.products {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.products .select-catalog {
+  display: grid;
+  grid-row-gap: 2rem;
+}
 .products .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
@@ -557,6 +565,114 @@ section {
 .login-form form .btn,
 .register-form form .btn {
   width: 100%;
+}
+
+.blogs .box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 0.2rem solid #333;
+}
+.blogs .box:hover .image img {
+  transform: scale(1.1);
+}
+.blogs .box .image {
+  width: 100%;
+  height: 25rem;
+  overflow: hidden;
+}
+.blogs .box .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.blogs .box .content {
+  padding: 2rem;
+}
+.blogs .box .content h3 {
+  font-size: 2rem;
+  color: #333;
+  line-height: 2;
+}
+.blogs .box .content p {
+  font-size: 1.4rem;
+  line-height: 2.5;
+  color: #666;
+  padding: 1rem 0;
+}
+.blogs .box .content .icons {
+  border-top: 0.2rem solid #333;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blogs .box .content .icons a {
+  font-size: 1.4rem;
+  color: #666;
+}
+.blogs .box .content .icons a:hover {
+  color: #e84393;
+}
+.blogs .box .content .icons a i {
+  padding-right: 0.5rem;
+  color: #e84393;
+}
+
+.blog .box-container {
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+.blog .box-container .box {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.blog .box-container .box .image {
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+.blog .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.blog .box-container .box .content {
+  padding: 2rem;
+}
+.blog .box-container .box .content h3 {
+  font-size: 2rem;
+  color: #333;
+  line-height: 2;
+}
+.blog .box-container .box .content p {
+  font-size: 1.4rem;
+  line-height: 2.5;
+  color: #666;
+  padding: 1rem 0;
+}
+.blog .box-container .box .content .icons {
+  border-top: 0.2rem solid #333;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blog .box-container .box .content .icons a {
+  font-size: 1.4rem;
+  color: #666;
+}
+.blog .box-container .box .content .icons a:hover {
+  color: #e84393;
+}
+.blog .box-container .box .content .icons a i {
+  padding-right: 0.5rem;
+  color: #e84393;
 }
 
 .footer .box-container {

@@ -2,7 +2,7 @@
 @section('content')
 <section>
     <h1 class="title">our daily posts</h1>
-    <div class="columns-2 gap-24 md:columns-2 sm:column-1">
+    <div class="blogs">
         @foreach($blogs as $blog)
         <div class="box">
             <div class="image">
