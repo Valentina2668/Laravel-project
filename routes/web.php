@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::get('product/{product}/remove_from_favorites', [Controllers\FavoriteController::class, 'removeProductFromFavorite'])->name('remove_product_from_favorite');
     Route::get('favorites', [Controllers\FavoriteController::class, 'showMy'])->name('my_favorites');
     Route::get('feed', [Controllers\FeedController::class, 'getIndex']);
+    
 });
 
 require __DIR__ . '/auth.php';
@@ -42,4 +43,6 @@ Route::get('product/{product}', [Controllers\ProductController::class, 'getOne']
 Route::get('allproducts', [Controllers\ProductController::class, 'getAll']);
 Route::get('blog', [Controllers\BlogController::class, 'getIndex']);
 Route::get('blog/{blog}', [Controllers\BlogController::class, 'getOne']);
+Route::get('add_cart/{id}', [Controllers\OrderController::class, 'addCookie']);
+Route::get('cart',[Controllers\OrderController::class, 'cart'])->name('cart');
 Route::get('{url}', [Controllers\BaseController::class, 'getIndex']);

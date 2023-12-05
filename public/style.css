@@ -101,7 +101,7 @@ section {
   display: block;
 }
 .header .navbar ul li h2:hover {
-  text-decoration: underline;
+  cursor: pointer;
 }
 .header .navbar ul li ul {
   position: absolute;

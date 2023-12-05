@@ -7,10 +7,12 @@
     <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">>
+    @stack('styles')
     <script src="/scripts.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
+    @stack('scripts')
 </head>
 
 <body>
@@ -49,24 +51,24 @@
                         <li><a href="blogs.html">blogs</a></li>
                     </ul>
                 </li> -->
-                <li><a href="contact.html">
+                <li><x-nav-link href="#">
                         <h2>Contacts</h2>
-                    </a></li>
+                    </x-nav-link></li>
 
                 <li>
                     @if(auth()->guest())
-                <li><a href="/login">
+                <li><x-nav-link href="/login">
                         <h2>login</h2>
-                    </a></li>
-                <li><a href="/register">
+                    </x-nav-link></li>
+                <li><x-nav-link href="/register">
                         <h2>register</h2>
-                    </a></li>
+                    </x-nav-link></li>
                 @else
                 <li>
 
-                    <a href="{{asset('dashboard')}}">
+                    <x-nav-link href="{{asset('dashboard')}}">
                         <h2>{{ __('Profile') }}</h2>
-                    </a>
+                    </x-nav-link>
                 <li>
                     <!-- Authentication -->
                     <form method="POST" action="{{ route('logout') }}">
@@ -87,7 +89,7 @@
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
             <div id="search-btn" class="fas fa-search"></div>
-            <a href="cart.html" class="fas fa-shopping-cart"></a>
+            <a href="/cart" class="fas fa-shopping-cart"></a>
         </div>
         <form action="{{asset('allproducts')}}" class="search-form">
             @csrf

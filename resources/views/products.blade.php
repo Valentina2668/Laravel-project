@@ -61,7 +61,7 @@
             </h1>
             <div class="image">
                 <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="{{asset('add_cart/'.$product->id)}}" class="fas fa-shopping-cart"></a>
                     <a href="{{asset('product/' .$product->id.'/add_to_favorites')}}" class="fas fa-heart"></a>
                     <a href="{{asset('product/'.$product->id)}}" class="fas fa-eye"></a>
                 </div>
@@ -69,7 +69,7 @@
             </div>
             <div class="content">
                 <h3>{{$product->status}}</h3>
-                <div class="price">{{$product->price}}<span>{{$product->discount}}</span></div>
+                <div class="price">{{$product->discount}}<span>{{$product->price}}</span></div>
             </div>
         </div>
         @endforeach

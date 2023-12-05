@@ -18,7 +18,7 @@ class ProductController extends Controller
     }
     public function getOne(Product $product)
     {
-        $favorite = Favorite::where('user_id', Auth::user()->id)->where('product_id', $product->id)->first();
+        $favorite = Favorite::where('user_id', optional(Auth::user())->id)->where('product_id', $product->id)->first();
         $sizes = explode(',', $product->size);
         // dd ($product);
         return view('product', compact('product', 'sizes', 'favorite'));

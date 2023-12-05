@@ -1,6 +1,6 @@
 @extends('layouts.base')
 @section('content')
-<section class="products">
+<section class="product-one">
     <section class="heading">
         <h1>products</h1>
         <p><a href="/">home</a>>><a href={{asset('products')}}>products</a> </p>
@@ -40,7 +40,16 @@
         </div>
 
     </div>
-</section>
-
+    
+    </section>
+    @if($errors->any())
+        @foreach($errors->all() as $error)
+            <div class="fixed top-0 right-0 bg-green-500 text-white p-2 mt-4 mr-4 rounded z-20" x-show="showHardware" x-data="{showHardware : true}">
+                <div  @click="showHardware = false">
+                {{$error}}
+                </div>
+            </div>
+        @endforeach
+    @endif
 
 @endsection
