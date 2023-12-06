@@ -89,7 +89,7 @@
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
             <div id="search-btn" class="fas fa-search"></div>
-            <a href="/cart" class="fas fa-shopping-cart"></a>
+            <a href="/cart" class="fas fa-shopping-cart"> <span>{{(isset($_COOKIE['order']))? count(explode(',', $_COOKIE['order'])):0}}</span></a>
         </div>
         <form action="{{asset('allproducts')}}" class="search-form">
             @csrf
@@ -108,7 +108,7 @@
                 <a href="/blog"><i class="fas fa-angle-right"></i>blogs</a>
                 <a href="/contact"><i class="fas fa-angle-right"></i>contact</a>
 
-                <a href="cart.html"><i class="fas fa-angle-right"></i>cart</a>
+                <a href="/cart"><i class="fas fa-angle-right"></i>cart</a>
             </div>
 
             <div class="box">

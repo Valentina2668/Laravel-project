@@ -48,6 +48,9 @@
         <div class="tex-center" text-sm mt-2>
             <button type="submit" class="btn"> Sort</button>
         </div>
+        <div class="tex-center" text-sm mt-2>
+            <button class="btn"><a href="/products"></a> Reset</button>
+        </div>
     </form>
 
     <!-- <section class=''>

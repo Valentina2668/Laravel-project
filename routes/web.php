@@ -45,4 +45,6 @@ Route::get('blog', [Controllers\BlogController::class, 'getIndex']);
 Route::get('blog/{blog}', [Controllers\BlogController::class, 'getOne']);
 Route::get('add_cart/{id}', [Controllers\OrderController::class, 'addCookie']);
 Route::get('cart',[Controllers\OrderController::class, 'cart'])->name('cart');
+Route::get('cart/delete/{product}', [Controllers\OrderController::class,'cartDelete']);
 Route::get('{url}', [Controllers\BaseController::class, 'getIndex']);
+
