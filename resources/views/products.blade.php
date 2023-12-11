@@ -59,7 +59,7 @@
     <div class="box-container">
         @foreach($products as $product)
         <div class="box">
-            <h1>
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
                 {{$product->name}}
             </h1>
             <div class="image">
