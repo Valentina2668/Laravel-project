@@ -7,7 +7,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     @stack('styles')
     <script src="/scripts.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,31 +18,32 @@
 <body>
 
     <header class="header">
-        <a href="/" class="logo"> logo</a>
+        <a href="/" class="logo">logo</a>
         <nav class="navbar">
             <ul>
-                <li><x-nav-link href="/">
-                        <h2>Home</h2>
+                <li>
+                    <x-nav-link href="/">
+                    <p class="font-medium tracking-normal text-xl ml-6"> Home</p>
                     </x-nav-link>
                 </li>
                 <li>
                     <x-nav-link href="/products" :active="request()->routeIs('products')">
-                        <h2>Catalog</h2>
+                    <p class="font-medium tracking-normal text-xl ml-6"> Catalog</p>
                     </x-nav-link>
                 </li>
                 <li>
                     <x-nav-link href="/about" :active="request()->routeIs('about')">
-                        <h2>About</h2>
+                    <p class="font-medium tracking-normal text-xl ml-6"> About</p>
                     </x-nav-link>
                 </li>
                 <li>
                     <x-nav-link href="/blog" :active="request()->routeIs('about')">
-                        <h2>Blogs</h2>
+                        <p class="font-medium tracking-normal text-xl ml-6"> Blogs</p>
                     </x-nav-link>
                 </li>
                 <li>
                     <x-nav-link href="{{asset('favorites')}}">
-                        <h2>Favorites</h2>
+                        <p class="font-medium tracking-normal text-xl ml-6">Favorites</p>
                     </x-nav-link>
                 </li>
                 <!-- <li><a href="#">pages +</a>
@@ -52,22 +53,22 @@
                     </ul>
                 </li> -->
                 <li><x-nav-link href="#">
-                        <h2>Contacts</h2>
+                <p class="font-medium tracking-normal text-xl ml-6"> Contacts</p>
                     </x-nav-link></li>
 
                 <li>
                     @if(auth()->guest())
                 <li><x-nav-link href="/login">
-                        <h2>login</h2>
+                <p class="font-medium tracking-normal text-xl ml-6"> login</p>
                     </x-nav-link></li>
                 <li><x-nav-link href="/register">
-                        <h2>register</h2>
+                <p class="font-medium tracking-normal text-xl ml-6"> register<p>
                     </x-nav-link></li>
                 @else
                 <li>
 
                     <x-nav-link href="{{asset('dashboard')}}">
-                        <h2>{{ __('Profile') }}</h2>
+                    <p class="font-medium tracking-normal text-xl ml-6"> {{ __('Profile') }}</p>
                     </x-nav-link>
                 <li>
                     <!-- Authentication -->
@@ -76,7 +77,7 @@
 
                         <x-nav-link :href="route('logout')" onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                            <h2>{{ __('Log Out') }}</h2>
+                            <p class="font-medium tracking-normal text-xl ml-6"> {{ __('Log Out') }}</p>
                         </x-nav-link>
                     </form>
                 </li>
