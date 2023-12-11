@@ -1,5 +1,6 @@
 @extends('layouts.base')
 @section('content')
+
 <section class="home">
     <div class="slide active" style="background: url(images/home-bg-1.jpg) no-repeat;">
         <div class="content">

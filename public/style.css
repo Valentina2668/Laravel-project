@@ -778,4 +778,16 @@ section {
   .home .slide .content h3 {
     font-size: 4rem;
   }
+  .products {
+    display: flex;
+    flex-direction: column;
+  }
+  .banner {
+    display: flex;
+    flex-direction: column;
+  }
+  .blogs .box {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */

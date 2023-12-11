@@ -326,10 +326,12 @@ section {
 .products {
     display: grid;
     grid-template-columns: 1fr 4fr;
-.select-catalog{
-    display: grid;
-    grid-row-gap: 2rem;
-}
+
+    .select-catalog {
+        display: grid;
+        grid-row-gap: 2rem;
+    }
+
     .box-container {
         @include grid(32rem);
 
@@ -953,6 +955,7 @@ section {
         }
     }
 
+
 }
 
 @media (max-width:450px) {
@@ -962,5 +965,22 @@ section {
 
     .home .slide .content h3 {
         font-size: 4rem;
+    }
+
+    .products {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blogs {
+        .box {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
