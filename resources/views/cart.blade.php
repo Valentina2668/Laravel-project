@@ -18,22 +18,28 @@
 
 
                     <div x-data="{'itogo':{{$itogo}},
-            async itogo_func(){}
-            }">
+                async itogo_func(){
+                let summa = 0;
+                @foreach($products as $product)
+                    summa+=parseFloat(document.getElementById('product{{$product->id}}').value) *
+                    parseFloat({{($product->discount != '') ? (float) $product->discount:(float)$product->price}});
+                    @endforeach
+
+                 this.itogo=summa;
+                        }
+                    }">
 
                         @foreach ($products as $product)
 
                         <div class="card rounded-3 mb-4" x-data="{
-                        async change_count_{{$product->id}}(){
-                            this.summa{{$product->id}} = {{($product->discount != '') ? (float) $product->discount:(float)$product->price}} * this.count{{$product->id}}
-                            console.log(this.summa{{$product->id}})
-                    },
-                    'summa{{$product->id}}':
-                    '{{($product->discount != '') ? (float) $product->discount:(float)$product->price}}',
-                        <!-- {{(float)$product->price}}, -->
-                    'count{{$product->id}}':1
-
-                }">
+                             async change_count_{{$product->id}}(){
+                             this.summa{{$product->id}} = {{($product->discount != '') ? (float) $product->discount:(float)$product->price}} * this.count{{$product->id}}
+                                
+                                },
+                                'summa{{$product->id}}':
+                                '{{($product->discount != '') ? (float) $product->discount:(float)$product->price}}',
+                                'count{{$product->id}}':1
+                                 }">
 
 
 
@@ -44,7 +50,7 @@
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-xl-3">
                                         <p class="lead fw-normal mb-2">{{$product->name}}</p>
-                                        <p><span class="text-muted">Size: </span>{{$product->size_id}} <span class="text-muted">Color: </span>Grey</p>
+                                        <p><span class="text-muted">Size: </span>{{$product->size_id}} 
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
                                         <button class="btn btn-link px-2" onclick="this.parentNode.querySelector('input[type=number]').stepDown();
@@ -56,7 +62,7 @@
                                             <i class="fas fa-minus"></i>
                                         </button>
 
-                                        <input type="number" min="1" max="1000" id="product{{$product->id}}" @change="change_count_{{$product->id}}(); itogo_func()" x-model="count{{$product->id}}" name="product_{{$product->id}}" class="form-control form-control-sm" />
+                                        <input type="number" value="1" min="1" max="1000" id="product{{$product->id}}" @change="change_count_{{$product->id}}(); itogo_func()" x-model="count{{$product->id}}" autocomplete="off" name="product_{{$product->id}}" class="form-control form-control-sm" />
 
                                         <button class="btn btn-link px-2" onclick="this.parentNode.querySelector('input[type=number]').stepUp();
                                     let sum = document.getElementById('product{{$product->id}}');
@@ -77,17 +83,9 @@
 
                         @endforeach
 
-                        Итого <div x-text="itogo"></div>
+                        Итого: <div x-text="itogo"></div>
                     </div>
-                    <!-- <div class="card mb-4">
-                    <div class="card-body p-4 d-flex flex-row">
-                        <div class="form-outline flex-fill">
-                            <input type="text" id="form1" class="form-control form-control-lg" />
-                            <label class="form-label" for="form1">Discound code</label>
-                        </div>
-                        <button type="button" class="btn btn-outline-warning btn-lg ms-3">Apply</button>
-                    </div>
-                </div> -->
+
 
                     <div class="card">
                         <div class="card-body">

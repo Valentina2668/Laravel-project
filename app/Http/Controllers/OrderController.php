@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Order;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -68,16 +70,33 @@ class OrderController extends Controller
     }
     public function formOrder(Request $request)
     {
-        $arr=$request->all();
-        $prod_arr=[];
-        $prod_count=[];
+        $arr = $request->all();
+        $prod_arr = [];
+        $prod_count = [];
         // abort_if (!optional($orderRec)->first(), 416, 'error request');
-        foreach ($arr as $key=>$value) {
+        foreach ($arr as $key => $value) {
             // $key product_1
             $key_ids = explode('_', $key);
-            $prod_arr[$key_ids[1]]=Product::find($key_ids[1]);
+            $prod_arr[$key_ids[1]] = Product::find($key_ids[1]);
             $prod_count[$key_ids[1]] = $value;
         }
         return view('form_order', compact('prod_arr', 'prod_count'));
     }
+    public function formSave(Request $request)
+    {
+        $serialize_products = serialize($request->product);
+        $new_order = new Order;
+        $new_order->ip_address = $request->ip();
+        $new_order->user_id = optional(Auth::user())->id;
+        $new_order->name = $request->name;
+        $new_order->email = $request->email ?? '';
+        $new_order->phone = $request->phone;
+        $new_order->details = $request->detales;
+        $new_order->body = $serialize_products;
+        $new_order->save();
+        setcookie('order', '', time() - 1, '/');
+        return redirect ('thankyoupage');
+    }
+
+    
 }
