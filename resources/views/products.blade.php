@@ -72,7 +72,8 @@
             </div>
             <div class="content">
                 <h3>{{$product->status}}</h3>
-                <div class="price">{{$product->discount}}<span>{{$product->price}}</span></div>
+                <div class="price">Цена со скидкой {{$product->discount}}</br>
+                <span>Обычная цена {{$product->price}}</span></div>
             </div>
         </div>
         @endforeach

@@ -16,89 +16,127 @@
 </head>
 
 <body>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 shadow-md">
 
-    <header class="header">
-        <a href="/" class="logo">logo</a>
-        <nav class="navbar">
-            <ul>
-                <li>
-                    <x-nav-link href="/">
-                    <p class="font-medium tracking-normal text-xl ml-6"> Home</p>
-                    </x-nav-link>
-                </li>
-                <li>
-                    <x-nav-link href="/products" :active="request()->routeIs('products')">
-                    <p class="font-medium tracking-normal text-xl ml-6"> Catalog</p>
-                    </x-nav-link>
-                </li>
-                <li>
-                    <x-nav-link href="/about" :active="request()->routeIs('about')">
-                    <p class="font-medium tracking-normal text-xl ml-6"> About</p>
-                    </x-nav-link>
-                </li>
-                <li>
-                    <x-nav-link href="/blog" :active="request()->routeIs('about')">
-                        <p class="font-medium tracking-normal text-xl ml-6"> Blogs</p>
-                    </x-nav-link>
-                </li>
-                <li>
-                    <x-nav-link href="{{asset('favorites')}}">
-                        <p class="font-medium tracking-normal text-xl ml-6">Favorites</p>
-                    </x-nav-link>
-                </li>
-                <!-- <li><a href="#">pages +</a>
-                    <ul>
-                        <li><a href="about.html">about</a></li>
-                        <li><a href="blogs.html">blogs</a></li>
-                    </ul>
-                </li> -->
-                <li><x-nav-link href="#">
-                <p class="font-medium tracking-normal text-xl ml-6"> Contacts</p>
-                    </x-nav-link></li>
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="/" class="flex items-center">
+                <img src="https://www.codewithfaraz.com/InstaPic.png" class="h-8 mr-3" alt="CodewithFaraz Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">HighProfile</span>
+            </a>
 
-                <li>
-                    @if(auth()->guest())
-                <li><x-nav-link href="/login">
-                <p class="font-medium tracking-normal text-xl ml-6"> login</p>
-                    </x-nav-link></li>
-                <li><x-nav-link href="/register">
-                <p class="font-medium tracking-normal text-xl ml-6"> register<p>
-                    </x-nav-link></li>
-                @else
-                <li>
+            <div class="flex md:order-2 items-center">
+                <div class="flex items-center justify-between mx-auto p-4">
+                    <a href="/cart">
+                        <svg class="h-5 w-5  text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+                    </a>
+                    <span class="ml-3  text-gray-500">{{(isset($_COOKIE['order']))? count(explode(',', $_COOKIE['order'])):0}}</span>
+                </div>
+                <form action="{{asset('allproducts')}}" class="search-form ">
+                    @csrf
+                    <button id="search-toggle" type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1">
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                        <span class="sr-only">Search</span>
+                    </button>
 
-                    <x-nav-link href="{{asset('dashboard')}}">
-                    <p class="font-medium tracking-normal text-xl ml-6"> {{ __('Profile') }}</p>
-                    </x-nav-link>
-                <li>
-                    <!-- Authentication -->
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-5 left-36 flex items-center pl-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                            </svg>
+                            <span class="sr-only">Search icon</span>
+                        </div>
+                        <input type="text" id="search-navbar" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+                    </div>
+                </form>
 
-                        <x-nav-link :href="route('logout')" onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                            <p class="font-medium tracking-normal text-xl ml-6"> {{ __('Log Out') }}</p>
+                <button id="navbar-toggle" data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+                <div class="relative mt-3 md:hidden">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <input type="text" id="search-navbar" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+                </div>
+                <ul class="flex flex-col p-6 md:p-0 mt-4 font-medium bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <x-nav-link href="/">
+                            <p class="block py-2 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> Home</p>
                         </x-nav-link>
-                    </form>
-                </li>
+                    </li>
+                    <li>
+                        <x-nav-link href="/products" :active="request()->routeIs('products')">
+                            <p class="block py-2 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> Catalog</p>
+                        </x-nav-link>
+                    <li>
+                        <x-nav-link href="/about" :active="request()->routeIs('about')">
+                            <p class="block py-2 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> About</p>
+                        </x-nav-link>
+                    </li>
+                    <li>
+                        <x-nav-link href="/blog" :active="request()->routeIs('about')">
+                            <p class="block py-2 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> Blogs</p>
+                        </x-nav-link>
+                    </li>
+                    <li>
+                        <x-nav-link href="{{asset('favorites')}}">
+                            <p class="block py-2 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Favorites</p>
+                        </x-nav-link>
+                    </li>
 
-                @endif
-                </li>
-            </ul>
-        </nav>
+                    <li><x-nav-link href="#">
+                            <p class="block py-2 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> Contacts</p>
+                        </x-nav-link></li>
 
-        <div class="icons">
-            <div id="menu-btn" class="fas fa-bars"></div>
-            <div id="search-btn" class="fas fa-search"></div>
-            <a href="/cart" class="fas fa-shopping-cart"> <span>{{(isset($_COOKIE['order']))? count(explode(',', $_COOKIE['order'])):0}}</span></a>
+                    <li>
+                        @if(auth()->guest())
+                    <li><x-nav-link href="/login">
+                            <p class="block py-2 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> login</p>
+                        </x-nav-link></li>
+                    <li><x-nav-link href="/register">
+                            <p class="block py-2 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> register
+                            <p>
+                        </x-nav-link></li>
+                    @else
+                    <li>
+                        <x-nav-link href="{{asset('dashboard')}}">
+                            <p class="block py-2 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> {{ __('Profile') }}</p>
+                        </x-nav-link>
+                    <li>
+                        <!-- Authentication -->
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <x-nav-link :href="route('logout')" onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                <p class="block py-2 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> {{ __('Log Out') }}</p>
+                            </x-nav-link>
+                        </form>
+                    </li>
+
+                    @endif
+                </ul>
+            </div>
         </div>
-        <form action="{{asset('allproducts')}}" class="search-form">
-            @csrf
-            <input type="search" name="search" placeholder="search here..." id="search-box">
-            <label for="search-box" class="fas fa-search"></label>
-        </form>
-    </header>
+    </nav>
+
     @yield('content')
+
+
+
     <section class="footer">
         <div class="box-container">
             <div class="box">

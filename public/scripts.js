@@ -1,21 +1,16 @@
-let searchForm = document.querySelector('.header .search-form');
+document.addEventListener('DOMContentLoaded', function () {
+    const button = document.getElementById('navbar-toggle');
+    const searchButton = document.getElementById('search-toggle');
+    const menu = document.getElementById('navbar-search');
 
-document.querySelector('#search-btn').onclick = () => {
-    searchForm.classList.toggle('active');
-    navbar.classList.remove('active');
-}
-let navbar = document.querySelector('.header .navbar');
+    searchButton.addEventListener('click', function (){
+        menu.classList.toggle('hidden');
+    });
 
-document.querySelector('#menu-btn').onclick = () => {
-    navbar.classList.toggle('active');
-    searchForm.classList.remove('active');
-   
-}
-window.onscroll = () => {
-    searchForm.classList.remove('active');
-    navbar.classList.remove('active');
-}
-
+    button.addEventListener('click', function () {
+        menu.classList.toggle('hidden');
+    });
+});
 let slides = document.querySelectorAll('.home .slide');
 let index = 0;
 function next(){

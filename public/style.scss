@@ -26,6 +26,7 @@ $border: .2rem solid $black;
 }
 
 html {
+    scroll-behavior: smooth;
     font-size: 62.5%;
     overflow-x: hidden;
 }
@@ -68,145 +69,6 @@ section {
 
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: .8rem 2.8rem;
-    font-size: 1.7rem;
-    color: $black;
-    border: $border;
-    background: none;
-    cursor: pointer;
-    border-radius: .5rem;
-
-    &:hover {
-        background: $black;
-        color: $white;
-    }
-}
-
-
-.header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background: $white;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-    display: flex;
-    align-content: center;
-    align-items: center;
-    padding: 0.9%;
-
-    .logo {
-        font-size: 2.5rem;
-        color: $black;
-        font-weight: bolder;
-        margin-right: auto;
-    }
-
-    .navbar {
-        ul {
-            list-style: none;
-
-            li {
-                position: relative;
-                float: left;
-
-                &:hover li {
-                    display: block;
-                    background-color: white;
-                }
-
-                h2 {
-                    font-size: 1.7rem;
-                    color: $light-color;
-                    padding: 2rem;
-                    display: block;
-
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
-
-                ul {
-                    position: absolute;
-                    left: 0;
-                    width: 20rem;
-                    background: $white;
-                    display: none;
-
-                    li {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
-
-    .icons div,
-    .icons a {
-        font-size: 2.5rem;
-        color: $black;
-        cursor: pointer;
-        margin-left: 2rem;
-
-        &:hover {
-            color: $pink;
-        }
-    }
-
-    .search-form {
-        position: absolute;
-        top: 99%;
-        left: 0;
-        right: 0;
-        border-top: $border;
-        background: $white;
-        height: 6rem;
-        display: flex;
-        align-items: center;
-        padding: 2rem;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-
-        &.active {
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-
-        input {
-            width: 100%;
-            height: 100%;
-            padding-right: 1rem;
-            font-size: 1.7rem;
-            color: $light-color;
-            text-transform: none;
-        }
-
-        label {
-            font-size: 2.5rem;
-            color: $black;
-            cursor: pointer;
-
-            &:hover {
-                color: $pink;
-            }
-        }
-
-
-    }
-}
-
-#menu-btn {
-    display: none;
-}
-
-@keyframes fadeIn {
-    0% {
-        transform: translateY(3rem);
-        opacity: 0;
-    }
-}
 
 .home {
     padding: 0;
@@ -244,10 +106,7 @@ section {
                 font-size: 6rem;
                 animation: fadeIn .4s linear .4s backwards;
             }
-
-            .btn {
-                animation: fadeIn .4s linear .6s backwards;
-            }
+           
         }
     }
 
@@ -313,11 +172,7 @@ section {
                 color: $black;
                 padding-top: 1rem;
             }
-
-            .btn {
-                padding: .6rem 2.5rem;
-                font-size: 1.5rem
-            }
+           
         }
     }
 

@@ -11,6 +11,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
   overflow-x: hidden;
 }
@@ -48,127 +49,6 @@ section {
   padding: 0 1rem;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.8rem 2.8rem;
-  font-size: 1.7rem;
-  color: #333;
-  border: 0.2rem solid #333;
-  background: none;
-  cursor: pointer;
-  border-radius: 0.5rem;
-}
-.btn:hover {
-  background: #333;
-  color: #fff;
-}
-
-.header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background: #fff;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-content: center;
-  align-items: center;
-  padding: 0.9%;
-}
-.header .logo {
-  font-size: 2.5rem;
-  color: #333;
-  font-weight: bolder;
-  margin-right: auto;
-}
-.header .navbar ul {
-  list-style: none;
-}
-.header .navbar ul li {
-  position: relative;
-  float: left;
-}
-.header .navbar ul li:hover li {
-  display: block;
-  background-color: white;
-}
-.header .navbar ul li h2 {
-  font-size: 1.7rem;
-  color: #666;
-  padding: 2rem;
-  display: block;
-}
-.header .navbar ul li h2:hover {
-  cursor: pointer;
-}
-.header .navbar ul li ul {
-  position: absolute;
-  left: 0;
-  width: 20rem;
-  background: #fff;
-  display: none;
-}
-.header .navbar ul li ul li {
-  width: 100%;
-}
-.header .icons div,
-.header .icons a {
-  font-size: 2.5rem;
-  color: #333;
-  cursor: pointer;
-  margin-left: 2rem;
-}
-.header .icons div:hover,
-.header .icons a:hover {
-  color: #e84393;
-}
-.header .search-form {
-  position: absolute;
-  top: 99%;
-  left: 0;
-  right: 0;
-  border-top: 0.2rem solid #333;
-  background: #fff;
-  height: 6rem;
-  display: flex;
-  align-items: center;
-  padding: 2rem;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-}
-.header .search-form.active {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-.header .search-form input {
-  width: 100%;
-  height: 100%;
-  padding-right: 1rem;
-  font-size: 1.7rem;
-  color: #666;
-  text-transform: none;
-}
-.header .search-form label {
-  font-size: 2.5rem;
-  color: #333;
-  cursor: pointer;
-}
-.header .search-form label:hover {
-  color: #e84393;
-}
-
-#menu-btn {
-  display: none;
-}
-
-@keyframes fadeIn {
-  0% {
-    transform: translateY(3rem);
-    opacity: 0;
-  }
-}
 .home {
   padding: 0;
   position: relative;
@@ -201,9 +81,6 @@ section {
   padding: 1rem 0;
   font-size: 6rem;
   animation: fadeIn 0.4s linear 0.4s backwards;
-}
-.home .slide .content .btn {
-  animation: fadeIn 0.4s linear 0.6s backwards;
 }
 .home #next-slide,
 .home #prev-slide {
@@ -260,10 +137,6 @@ section {
   font-size: 2rem;
   color: #333;
   padding-top: 1rem;
-}
-.banner .box .content .btn {
-  padding: 0.6rem 2.5rem;
-  font-size: 1.5rem;
 }
 
 .products {
