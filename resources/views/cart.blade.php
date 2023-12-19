@@ -50,7 +50,7 @@
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-xl-3">
                                         <p class="lead fw-normal mb-2">{{$product->name}}</p>
-                                        <p><span class="text-muted">Size: </span>{{$product->size_id}} 
+                                        <span class="text-muted">Size:{{$sizes[$product->id]}} </span>
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
                                         <button class="btn btn-link px-2" onclick="this.parentNode.querySelector('input[type=number]').stepDown();

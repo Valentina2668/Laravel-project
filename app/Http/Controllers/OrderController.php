@@ -6,17 +6,22 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\OrderRequest;
 
 class OrderController extends Controller
 {
     public function addCookie($id = null, Request $request)
     {
-        // dd($_COOKIE['order']);
+        $size =':0';
+        if ($request->has('size')){
+            $size=':'.$request->size;
+        }
+    //    dd($request->all());
 
         $order = $_COOKIE['order'] ?? null;
         if ($order) {
             $keys = explode(',', $order);
-            $keys_id = $id . ':1';
+            $keys_id = $id . ':1'.$size;
             // explode выбрасывает , из кода, создал массив 14:1, 15:2, 35:5 
             // keys[0];
             if (in_array($keys_id, $keys)) {
@@ -26,7 +31,7 @@ class OrderController extends Controller
                 $order = implode(',', $keys);
             };
         } else {
-            $order = $id . ':1';
+            $order = $id . ':1'.$size;
         };
         setCookie('order', $order, time() + 3600, '/');
         return redirect()->back();
@@ -37,6 +42,7 @@ class OrderController extends Controller
     {
         $order_arr = [];
         $products = [];
+        $sizes=[];
         $itogo = 0;
         if (isset($_COOKIE['order'])) {
             $order_arr = explode(',', $_COOKIE['order']);
@@ -47,10 +53,11 @@ class OrderController extends Controller
                 $prod = Product::find($prod_ids[0]);
                 $itogo += ($prod->discount != '') ? (float)$prod->discount : (float)$prod->price;
                 $products[$prod_ids[0]] = $prod;
+                $sizes[$prod_ids[0]] = $prod_ids[2];
             }
         }
         // dd($order_arr);
-        return view('cart', compact('products', 'itogo'));
+        return view('cart', compact('products', 'itogo','sizes'));
     }
     public function cartDelete(Product $product)
     {
@@ -82,7 +89,7 @@ class OrderController extends Controller
         }
         return view('form_order', compact('prod_arr', 'prod_count'));
     }
-    public function formSave(Request $request)
+    public function formSave(OrderRequest $request)
     {
         $serialize_products = serialize($request->product);
         $new_order = new Order;

@@ -1,6 +1,13 @@
 @extends('layouts.base')
 @section('content')
 <section>
+    @if($errors->any())
+    <div>
+        @foreach($errors->all() as $error)
+        <div class="text-red-600 ">{{$error}}</div>
+        @endforeach
+    </div>
+    @endif
     <form action="{{asset('cart/form_save')}}" method="post">
         @csrf
         @php
@@ -28,26 +35,35 @@
 
         </tr>
         <div class="grid grid-cols-2">
-            <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l flex flex-col">
+            <div class="p-6 border-1 border-gray-200 dark:border-gray-700 md:border-l flex flex-col">
                 <label for="name" class="block">
                     <span class="text-gray-700">Имя</span>
+                    @if($errors->has('name'))
+                    {{$errors->first('name')}}
+                    @endif
                     <input class="block w-full mt-1 form-input" placeholder="Ваше имя" id="name" name="name" type="text" autocomplete="off" required="">
                 </label>
                 <label for="email" class="block mt-4">
                     <span class="text-gray-700">Email</span>
-                    <input class="block w-full mt-1 form-input" id="email" name="email" autocomplete="off" type="email" required="">
+                    @if($errors->has('email'))
+                    {{$errors->first('email')}}
+                    @endif
+                    <input class="block w-full mt-1 form-input" id="email" name="email" autocomplete="off" type="email" >
                 </label>
                 <label for="phone" class="hidden sm:block mt-4">
                     <span class="text-gray-700">Телефон</span>
-                    <input class="block w-full mt-1 form-input" id="phone" name="phone" autocomplete="off" type="tel">
+                    @if($errors->has('phone'))
+                    {{$errors->first('phone')}}
+                    @endif
+                    <input class="block w-full mt-1 form-input" id="phone" name="phone" autocomplete="off" type="tel" required type="text" pattern="\+375\([0-9]{2}\)[0-9 -]{6,12} {6,12}" placeholder="+375(__) ___ __ __" title="Формат: (096) 99">
                 </label>
             </div>
-            <div class="p-6 border-t border-black-200 dark:border-gray-700 md:border-r flex flex-col">
+            <div class="p-6 border-1 border-black-200 dark:border-gray-700 md:border-r flex flex-col">
                 <label class="block ">
                     <span class="text-gray-700">Детали (необязательно)</span>
                     <textarea class="block w-full mt-1 form-textarea" wire:model="message" name="details" rows="3" placeholder="Детали"></textarea>
                 </label>
-                <button class="px-4 py-2 mt-8 font-semibold text-gray-800 bg-white border border-gray-300 rounded shadow hover:bg-gray-100">
+                <button class="px-4 py-2 border-1 black mt-8 font-semibold text-gray-800 bg-white border border-gray-300 rounded shadow hover:bg-gray-100">
                     Подтвердить заказ
                 </button>
             </div>
