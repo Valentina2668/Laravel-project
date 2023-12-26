@@ -11,22 +11,23 @@
 
                     <div class="d-flex justify-content-between align-items-center mb-4">
                         <h3 class="fw-normal mb-0 text-black">Shopping Cart</h3>
-                        <div>
+                        <!-- <div>
                             <p class="mb-0"><span class="text-muted">Sort by:</span> <a href="#!" class="text-body">price <i class="fas fa-angle-down mt-1"></i></a></p>
-                        </div>
-                    </div>
+                        </div> -->
+                </div>
 
 
-                    <div x-data="{'itogo':{{$itogo}},
-                async itogo_func(){
-                let summa = 0;
-                @foreach($products as $product)
-                    summa+=parseFloat(document.getElementById('product{{$product->id}}').value) *
+                <div x-data="{'itogo':{{$itogo}},
+                    async itogo_func(){
+                    let summa = 0;
+                         @foreach($products as $product)
+                    summa += parseFloat(document.getElementById('product{{$product->id}}').value) *
                     parseFloat({{($product->discount != '') ? (float) $product->discount:(float)$product->price}});
-                    @endforeach
+                    console.log(summa);
+                        @endforeach
 
-                 this.itogo=summa;
-                        }
+                    this.itogo=summa;
+                        },
                     }">
 
                         @foreach ($products as $product)
@@ -34,15 +35,12 @@
                         <div class="card rounded-3 mb-4" x-data="{
                              async change_count_{{$product->id}}(){
                              this.summa{{$product->id}} = {{($product->discount != '') ? (float) $product->discount:(float)$product->price}} * this.count{{$product->id}}
-                                
+                                console.log(this.summa{{$product->id}});
                                 },
                                 'summa{{$product->id}}':
                                 '{{($product->discount != '') ? (float) $product->discount:(float)$product->price}}',
                                 'count{{$product->id}}':1
                                  }">
-
-
-
                             <div class="card-body p-4">
                                 <div class="row d-flex justify-content-between align-items-center">
                                     <div class="col-md-2 col-lg-2 col-xl-2">
@@ -53,22 +51,18 @@
                                         <span class="text-muted">Size:{{$sizes[$product->id]}} </span>
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                        <button class="btn btn-link px-2" onclick="this.parentNode.querySelector('input[type=number]').stepDown();
-                                    let sums = document.getElementById('product{{$product->id}}');
-                                    sums.dispatchEvent(new Event('input'));
-                                    // change_count{{$product->id}}();
-
-                                    ">
+                                        <button class="btn btn-link px-2" @click.prevent="count{{$product->id}}--;
+                                        await change_count_{{$product->id}}();
+                                        itogo_func();">
                                             <i class="fas fa-minus"></i>
                                         </button>
 
                                         <input type="number" value="1" min="1" max="1000" id="product{{$product->id}}" @change="change_count_{{$product->id}}(); itogo_func()" x-model="count{{$product->id}}" autocomplete="off" name="product_{{$product->id}}" class="form-control form-control-sm" />
 
-                                        <button class="btn btn-link px-2" onclick="this.parentNode.querySelector('input[type=number]').stepUp();
-                                    let sum = document.getElementById('product{{$product->id}}');
-                                    sum.dispatchEvent(new Event('input'));
-                                    ">
-                                            <i class="fas fa-plus"></i>
+                                        <button class="btn btn-link px-2" @click.prevent="count{{$product->id}}++;
+                                        await change_count_{{$product->id}}();
+                                        itogo_func();">
+                                            <i class=" fas fa-plus"></i>
                                         </button>
                                     </div>
                                     <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
