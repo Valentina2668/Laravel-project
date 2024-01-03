@@ -107,38 +107,6 @@ section {
   right: 9rem;
 }
 
-.banner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2em;
-}
-.banner .box {
-  position: relative;
-  height: 30rem;
-  overflow: hidden;
-  border-radius: 0.5rem;
-}
-.banner .box:hover img {
-  transform: scale(1.1);
-}
-.banner .box img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.banner .box .content {
-  position: absolute;
-  top: 40%;
-  right: 3rem;
-  transform: translateY(-80%);
-}
-.banner .box .content h3 {
-  font-size: 2rem;
-  color: #333;
-  padding-top: 1rem;
-}
-
 .products {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -652,10 +620,6 @@ section {
     font-size: 4rem;
   }
   .products {
-    display: flex;
-    flex-direction: column;
-  }
-  .banner {
     display: flex;
     flex-direction: column;
   }
