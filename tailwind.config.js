@@ -11,7 +11,7 @@ export default {
         "./resources/**/*.js",
         "./resources/**/*.vue",
         "./src/**/*.{html,js}",
-        "./node_modules/tw-elements/dist/js/**/*.js"
+        
 
     ],
 
@@ -24,6 +24,6 @@ export default {
             
         },
 
-        plugins: [require("tw-elements/dist/plugin.cjs")],
+        plugins: [forms],
     },
 };
