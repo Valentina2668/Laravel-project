@@ -30,7 +30,7 @@
     <div id="next-slide" onclick="next()" class="fas fa-angle-right"></div>
     <div id="prev-slide" onclick="prev()" class="fas fa-angle-left"></div>
 </section>
-<section class="grid grid-cols-1 gap-4 sm:grid-cols-2 ">
+<section class="grid grid-cols-1 gap-4 p-2 sm:grid-cols-2">
     <div class="relative overflow-hidden h-400 rounded-lg border-1">
         <img src="images/sale.jpg" class="max-w-100% h-100% object-cover hover:scale-110">
         <button class="absolute top-7 right-3 bg-orange-50 text-3xl text-gray-900 py-3 px-10 rounded-lg border-1 border-gray-600 hover:border-green-600">
