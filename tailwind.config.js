@@ -11,7 +11,7 @@ export default {
         "./resources/**/*.js",
         "./resources/**/*.vue",
         "./src/**/*.{html,js}",
-        
+
 
     ],
 
@@ -26,4 +26,6 @@ export default {
 
         plugins: [forms],
     },
-};
+    
+    
+}

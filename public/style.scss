@@ -9,11 +9,13 @@
     outline: none;
     border: none;
     text-transform: capitalize;
+  
+    
     // transition: all .2s linear;
 }
 
-$pink: #e84393;
-$black: #333;
+$bright: #04fe2a;
+$black: #1c1c1c;
 $white: #fff;
 $light-color: #666;
 $light-bg: #eee;
@@ -29,6 +31,7 @@ html {
     scroll-behavior: smooth;
     font-size: 62.5%;
     overflow-x: hidden;
+    
 }
 
 section {
@@ -37,7 +40,7 @@ section {
 
 .heading {
     text-align: center;
-    background: $pink;
+    background: $bright;
 
     h1 {
         font-size: 3rem;
@@ -75,8 +78,10 @@ section {
     position: relative;
 
     .slide {
+        margin: 0 auto;
         display: flex;
-        min-height: 60vh;
+        min-height: 85vh;
+        max-width: 80vw;
         padding: 2rem 7%;
         background-size: cover !important;
         background-position: center !important;
@@ -251,7 +256,7 @@ section {
 
                     i {
                         font-size: 1.4rem;
-                        color: $pink;
+                        color: $bright;
                     }
                 }
 
@@ -400,12 +405,12 @@ section {
                     color: $light-color;
 
                     &:hover {
-                        color: $pink;
+                        color: $bright;
                     }
 
                     i {
                         padding-right: .5rem;
-                        color: $pink;
+                        color: $bright;
                     }
                 }
             }
@@ -513,7 +518,7 @@ section {
                 margin-left: auto;
 
                 &:hover {
-                    color: $pink;
+                    color: $bright;
                 }
             }
 
@@ -524,7 +529,7 @@ section {
             color: $white;
 
             &:hover {
-                background: $pink;
+                background: $bright;
 
             }
         }
@@ -588,12 +593,12 @@ section {
                 color: $light-color;
 
                 &:hover {
-                    color: $pink;
+                    color: $bright;
                 }
 
                 i {
                     padding-right: .5rem;
-                    color: $pink;
+                    color: $bright;
                 }
             }
         }
@@ -653,12 +658,12 @@ section {
                         color: $light-color;
 
                         &:hover {
-                            color: $pink;
+                            color: $bright;
                         }
 
                         i {
                             padding-right: .5rem;
-                            color: $pink;
+                            color: $bright;
                         }
                     }
                 }
@@ -709,7 +714,7 @@ section {
             padding: 1rem 0;
 
             &:hover {
-                color: $pink;
+                color: $bright;
 
                 i {
                     padding-right: 2rem;
@@ -717,7 +722,7 @@ section {
             }
 
             i {
-                color: $pink;
+                color: $bright;
                 padding-right: .5rem;
             }
         }
@@ -751,7 +756,7 @@ section {
     border-top: $border;
 
     span {
-        color: $pink;
+        color: $bright;
     }
 }
 

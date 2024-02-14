@@ -4,15 +4,15 @@
 </section>
 <section class="home">
     <div class="slide active" style="background: url(images/home-bg-1.jpg) no-repeat;">
-        <div class="content">
-            <h3>Fly Up</h3>
-            <button class="text-3xl text-gray-900 py-3 px-10 rounded-lg border-1 border-gray-600 hover:border-green-600">
+        <div class="content bg-transparent">
+            <h3 class="bg-transparent text-white">Fly Up</h3>
+            <button class="text-3xl text-grey-900 py-3 px-10 rounded-lg border-1 border-gray-600 hover:border-green-600">
                 <a href="/products">shop now</a>
             </button>
         </div>
     </div>
     <div class="slide" style="background: url(images/home-bg-2.jpg) no-repeat;">
-        <div class="content">
+        <div class="content bg-transparent">
             <h3>Be Invincible</h3>
             <button class="text-3xl text-gray-900 py-3 px-10 rounded-lg border-1 border-gray-600 hover:border-green-600">
                 <a href="/products">shop now</a>
@@ -20,8 +20,8 @@
         </div>
     </div>
     <div class="slide" style="background: url(images/home-bg-3.jpg) no-repeat;">
-        <div class="content">
-            <h3>Run fast</h3>
+        <div class="content bg-transparent">
+            <h3 >Run fast</h3>
             <button class="text-3xl text-gray-900 py-3 px-10 rounded-lg border-1 border-gray-600 hover:border-green-600">
                 <a href="/products">shop now</a>
             </button>

@@ -31,7 +31,6 @@ Route::middleware('auth')->group(function () {
     Route::get('product/{product}/add_to_favorites', [Controllers\FavoriteController::class, 'addProductToFavorite'])->name('add_product_to_favorite');
     Route::get('product/{product}/remove_from_favorites', [Controllers\FavoriteController::class, 'removeProductFromFavorite'])->name('remove_product_from_favorite');
     Route::get('favorites', [Controllers\FavoriteController::class, 'showMy'])->name('my_favorites');
-    Route::get('feed', [Controllers\FeedController::class, 'getIndex']);
     
 });
 
@@ -43,6 +42,7 @@ Route::get('product/{product}', [Controllers\ProductController::class, 'getOne']
 Route::get('allproducts', [Controllers\ProductController::class, 'getAll']);
 Route::get('blog', [Controllers\BlogController::class, 'getIndex']);
 Route::get('blog/{blog}', [Controllers\BlogController::class, 'getOne']);
+Route::get('feed', [Controllers\FeedController::class, 'getIndex']);
 Route::get('add_cart/{id}', [Controllers\OrderController::class, 'addCookie']);
 Route::get('cart',[Controllers\OrderController::class, 'cart'])->name('cart');
 Route::get('cart/delete/{product}', [Controllers\OrderController::class,'cartDelete']);

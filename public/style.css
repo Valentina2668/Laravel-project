@@ -22,7 +22,7 @@ section {
 
 .heading {
   text-align: center;
-  background: #e84393;
+  background: #04fe2a;
 }
 .heading h1 {
   font-size: 3rem;
@@ -38,12 +38,12 @@ section {
   color: #fff;
 }
 .heading a:hover {
-  color: #333;
+  color: #1c1c1c;
 }
 
 .title {
   font-size: 3rem;
-  color: #333;
+  color: #1c1c1c;
   margin-bottom: 2rem;
   text-align: center;
   padding: 0 1rem;
@@ -54,8 +54,10 @@ section {
   position: relative;
 }
 .home .slide {
+  margin: 0 auto;
   display: flex;
-  min-height: 60vh;
+  min-height: 85vh;
+  max-width: 80vw;
   padding: 2rem 7%;
   background-size: cover !important;
   background-position: center !important;
@@ -70,13 +72,13 @@ section {
   padding: 3rem;
 }
 .home .slide .content span {
-  color: #333;
+  color: #1c1c1c;
   display: block;
   font-size: 2rem;
   animation: fadeIn 0.4s linear 0.2s backwards;
 }
 .home .slide .content h3 {
-  color: #333;
+  color: #1c1c1c;
   text-transform: uppercase;
   padding: 1rem 0;
   font-size: 6rem;
@@ -91,8 +93,8 @@ section {
   width: 6rem;
   line-height: 5.5rem;
   font-size: 4rem;
-  color: #333;
-  border: 0.2rem solid #333;
+  color: #1c1c1c;
+  border: 0.2rem solid #1c1c1c;
   background: #fff;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -100,7 +102,7 @@ section {
 }
 .home #next-slide:hover,
 .home #prev-slide:hover {
-  background: #333;
+  background: #1c1c1c;
   color: #fff;
 }
 .home #prev-slide {
@@ -123,7 +125,7 @@ section {
 .products .box-container .box {
   border-radius: 0.5rem;
   text-align: center;
-  border: 0.2rem solid #333;
+  border: 0.2rem solid #1c1c1c;
 }
 .products .box-container .box:hover .image .icons {
   transform: translateY(0);
@@ -140,7 +142,7 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  border-bottom: 0.2rem solid #333;
+  border-bottom: 0.2rem solid #1c1c1c;
   transform: translateY(-7rem);
 }
 .products .box-container .box .image .icons a {
@@ -148,10 +150,10 @@ section {
   width: 5rem;
   line-height: 5rem;
   font-size: 2rem;
-  color: #333;
+  color: #1c1c1c;
 }
 .products .box-container .box .image .icons a:hover {
-  background: #333;
+  background: #1c1c1c;
   color: #fff;
 }
 .products .box-container .box .image img {
@@ -165,18 +167,18 @@ section {
 }
 .products .box-container .box .content h3 {
   font-size: 2rem;
-  color: #333;
+  color: #1c1c1c;
 }
 .products .box-container .box .content .stars {
   padding: 1rem 0;
 }
 .products .box-container .box .content .stars i {
   font-size: 1.4rem;
-  color: #e84393;
+  color: #04fe2a;
 }
 .products .box-container .box .content .price {
   font-size: 2.2rem;
-  color: #333;
+  color: #1c1c1c;
 }
 .products .box-container .box .content span {
   font-size: 1.5rem;
@@ -202,7 +204,7 @@ section {
 }
 .about .row .content h3 {
   font-size: 3.5rem;
-  color: #333;
+  color: #1c1c1c;
   line-height: 2;
 }
 .about .row .content p {
@@ -220,12 +222,12 @@ section {
 .about .icon-container .icons {
   padding: 3rem 2rem;
   border-radius: 0.5rem;
-  border: 0.2rem solid #333;
+  border: 0.2rem solid #1c1c1c;
   text-align: center;
   cursor: pointer;
 }
 .about .icon-container .icons:hover {
-  background: #333;
+  background: #1c1c1c;
 }
 .about .icon-container .icons:hover img {
   filter: invert(1);
@@ -239,7 +241,7 @@ section {
 }
 .about .icon-container .icons h3 {
   font-size: 1.7rem;
-  color: #333;
+  color: #1c1c1c;
 }
 
 .blogs .box-container {
@@ -250,7 +252,7 @@ section {
 .blogs .box-container .box {
   border-radius: 0.5rem;
   overflow: hidden;
-  border: 0.2rem solid #333;
+  border: 0.2rem solid #1c1c1c;
 }
 .blogs .box-container .box:hover .image img {
   transform: scale(1.1);
@@ -271,7 +273,7 @@ section {
 }
 .blogs .box-container .box .content h3 {
   font-size: 2rem;
-  color: #333;
+  color: #1c1c1c;
   line-height: 2;
 }
 .blogs .box-container .box .content p {
@@ -281,7 +283,7 @@ section {
   padding: 1rem 0;
 }
 .blogs .box-container .box .content .icons {
-  border-top: 0.2rem solid #333;
+  border-top: 0.2rem solid #1c1c1c;
   padding-top: 2rem;
   margin-top: 2rem;
   display: flex;
@@ -293,11 +295,11 @@ section {
   color: #666;
 }
 .blogs .box-container .box .content .icons a:hover {
-  color: #e84393;
+  color: #04fe2a;
 }
 .blogs .box-container .box .content .icons a i {
   padding-right: 0.5rem;
-  color: #e84393;
+  color: #04fe2a;
 }
 
 .contact .row {
@@ -309,12 +311,12 @@ section {
   flex: 1 1 42rem;
   padding: 2rem;
   border-radius: 0.5rem;
-  border: 0.2rem solid #333;
+  border: 0.2rem solid #1c1c1c;
 }
 .contact .row form .box,
 .contact .row form textarea {
   width: 100%;
-  border-bottom: 0.2rem solid #333;
+  border-bottom: 0.2rem solid #1c1c1c;
   margin-bottom: 1rem;
   padding: 1rem;
   font-size: 1.6rem;
@@ -336,7 +338,7 @@ section {
   margin: 1rem auto;
   max-width: 40rem;
   border-radius: 0.5rem;
-  border: 0.2rem solid #333;
+  border: 0.2rem solid #1c1c1c;
   padding: 2rem;
   text-align: center;
 }
@@ -344,7 +346,7 @@ section {
 .register-form form h3 {
   font-size: 2.2rem;
   text-transform: uppercase;
-  color: #333;
+  color: #1c1c1c;
 }
 .login-form form .inputBox,
 .register-form form .inputBox {
@@ -392,16 +394,16 @@ section {
 }
 .login-form form .flex a:hover,
 .register-form form .flex a:hover {
-  color: #e84393;
+  color: #04fe2a;
 }
 .login-form form input[type=submit],
 .register-form form input[type=submit] {
-  background: #333;
+  background: #1c1c1c;
   color: #fff;
 }
 .login-form form input[type=submit]:hover,
 .register-form form input[type=submit]:hover {
-  background: #e84393;
+  background: #04fe2a;
 }
 .login-form form .btn,
 .register-form form .btn {
@@ -413,7 +415,7 @@ section {
   grid-template-columns: 1fr 1fr;
   border-radius: 0.5rem;
   overflow: hidden;
-  border: 0.2rem solid #333;
+  border: 0.2rem solid #1c1c1c;
 }
 .blogs .box:hover .image img {
   transform: scale(1.1);
@@ -434,7 +436,7 @@ section {
 }
 .blogs .box .content h3 {
   font-size: 2rem;
-  color: #333;
+  color: #1c1c1c;
   line-height: 2;
 }
 .blogs .box .content p {
@@ -444,7 +446,7 @@ section {
   padding: 1rem 0;
 }
 .blogs .box .content .icons {
-  border-top: 0.2rem solid #333;
+  border-top: 0.2rem solid #1c1c1c;
   padding-top: 2rem;
   margin-top: 2rem;
   display: flex;
@@ -456,11 +458,11 @@ section {
   color: #666;
 }
 .blogs .box .content .icons a:hover {
-  color: #e84393;
+  color: #04fe2a;
 }
 .blogs .box .content .icons a i {
   padding-right: 0.5rem;
-  color: #e84393;
+  color: #04fe2a;
 }
 
 .blog .box-container {
@@ -487,7 +489,7 @@ section {
 }
 .blog .box-container .box .content h3 {
   font-size: 2rem;
-  color: #333;
+  color: #1c1c1c;
   line-height: 2;
 }
 .blog .box-container .box .content p {
@@ -497,7 +499,7 @@ section {
   padding: 1rem 0;
 }
 .blog .box-container .box .content .icons {
-  border-top: 0.2rem solid #333;
+  border-top: 0.2rem solid #1c1c1c;
   padding-top: 2rem;
   margin-top: 2rem;
   display: flex;
@@ -509,11 +511,11 @@ section {
   color: #666;
 }
 .blog .box-container .box .content .icons a:hover {
-  color: #e84393;
+  color: #04fe2a;
 }
 .blog .box-container .box .content .icons a i {
   padding-right: 0.5rem;
-  color: #e84393;
+  color: #04fe2a;
 }
 
 .footer .box-container {
@@ -523,7 +525,7 @@ section {
 }
 .footer .box h3 {
   font-size: 2.2rem;
-  color: #333;
+  color: #1c1c1c;
   padding: 1rem 0;
 }
 .footer .box a {
@@ -533,13 +535,13 @@ section {
   padding: 1rem 0;
 }
 .footer .box a:hover {
-  color: #e84393;
+  color: #04fe2a;
 }
 .footer .box a:hover i {
   padding-right: 2rem;
 }
 .footer .box a i {
-  color: #e84393;
+  color: #04fe2a;
   padding-right: 0.5rem;
 }
 .footer .box p {
@@ -564,10 +566,10 @@ section {
   margin-top: 2.5rem;
   font-size: 2rem;
   color: #666;
-  border-top: 0.2rem solid #333;
+  border-top: 0.2rem solid #1c1c1c;
 }
 .credits span {
-  color: #e84393;
+  color: #04fe2a;
 }
 
 @media (max-width: 1200px) {
