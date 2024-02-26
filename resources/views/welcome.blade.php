@@ -5,25 +5,25 @@
 <section class="home">
     <div class="slide active" style="background: url(images/home-bg-1.jpg) no-repeat;">
         <div class="bg-transparent flex flex-col">
-            <h3 class="bg-transparent text-2xl text-white pb-10 ">Fly Up</h3>
-            <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm px-6 py-2.5 text-center me-4 mb-4">
-            <a href="/products">Shop now</a></button>                
+            <h3 class="bg-transparent text-7xl text-white pb-10 ">Fly Up</h3>
+            <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-5xl px-6 py-2.5 text-center p-8 w-64 h-24">
+            <a href="/products">Купить</a></button>                
             </button>
         </div>
     </div>
     <div class="slide" style="background: url(images/home-bg-2.jpg) no-repeat;">
         <div class="bg-transparent">
-            <h3 class="bg-transparent text-2xl text-white pb-10 ">Be Invincible</h3>
-            <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm px-6 py-2.5 text-center me-4 mb-4">
-            <a href="/products">Shop now</a></button>                
+            <h3 class="bg-transparent text-7xl text-white pb-10 ">Be Invincible</h3>
+            <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-5xl px-6 py-2.5 text-center p-8 w-64 h-24">
+            <a href="/products">Купить</a></button>                
             </button>
         </div>
     </div>
     <div class="slide" style="background: url(images/home-bg-3.jpg) no-repeat;">
         <div class="bg-transparent">
-            <h3 class="bg-transparent text-2xl text-white pb-10 ">Run fast</h3>
-            <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm px-6 py-2.5 text-center me-4 mb-4">
-            <a href="/products">Shop now</a></button>                
+            <h3 class="bg-transparent text-7xl text-white pb-10 ">Run fast</h3>
+            <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-5xl px-6 py-2.5 text-center p-8 w-64 h-24">
+            <a href="/products">Купить</a></button>                
             </button>
         </div>
     </div>
