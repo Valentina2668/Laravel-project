@@ -1,7 +1,11 @@
 @extends('layouts.base')
 @section('content')
+
+<section class="heading">
+    <h1>Блог</h1>
+    <p><a href="/"> Главная</a>  >  Блог </p>
+</section>
 <section>
-    <h1 class="title">our daily posts</h1>
     <div class="blogs">
         @foreach($blogs as $blog)
         <div class="box">

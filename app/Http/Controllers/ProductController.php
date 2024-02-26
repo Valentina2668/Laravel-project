@@ -33,4 +33,5 @@ class ProductController extends Controller
         $products = Product::filter($request->all())->simplePaginate(9);
         return view('products', compact('products'));
     }
+    
 }

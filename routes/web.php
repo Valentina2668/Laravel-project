@@ -36,7 +36,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__ . '/auth.php';
 
-//вот этот путь всегда в конце последней строчкой. 
+
 Route::get('products', [Controllers\ProductController::class, 'getIndex']);
 Route::get('product/{product}', [Controllers\ProductController::class, 'getOne']); //маршрут для одного товара
 Route::get('allproducts', [Controllers\ProductController::class, 'getAll']);
@@ -48,5 +48,5 @@ Route::get('cart',[Controllers\OrderController::class, 'cart'])->name('cart');
 Route::get('cart/delete/{product}', [Controllers\OrderController::class,'cartDelete']);
 Route::get('form_order', [Controllers\OrderController::class, 'formOrder']);
 Route::post('cart/form_save', [Controllers\OrderController::class, 'formSave']);
-Route::get('{url}', [Controllers\BaseController::class, 'getIndex']);
+Route::get('{url}', [Controllers\BaseController::class, 'getIndex']); //вот этот путь всегда в конце последней строчкой. 
 

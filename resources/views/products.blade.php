@@ -4,24 +4,24 @@
 
 
 <section class="heading">
-    <h1>products</h1>
-    <p><a href="/">home</a>>><a href={{asset('products')}}>products</a> >> catalog </p>
+    <h1>Каталог</h1>
+    <p><a href="/">Главная</a> > <a href={{asset('products')}}>Каталог</a></p>
 </section>
-<h1 class="title">featured products</h1>
+<!-- <h1 class="title">featured products</h1> -->
 <section class="products">
-    <form class="p-2" action="{{asset('products')}}">
-        <div class="select-catalog">
-            <select name='catalog' class="catalog-name">
-                <option value=0> Choose from the catalog
+    <form class="p-2 m-3" action="{{asset('products')}}">
+        <div class="select-catalog text-2xl">
+            <select name='catalog' class="catalog-name ">
+                <option value=0 class="text-xl"> Выберите каталог
                 </option>
-                <option value=1>For men
+                <option value=1 class="text-xl">Мужские
                 </option>
-                <option value=2>For women
+                <option value=2 class="text-xl">Женские
                 </option>
             </select>
             <select name="size">
-                <option value="">
-                    Choose you size
+                <option value="" class="text-xl">
+                    Выберите размер
                 </option>
                 <option value="35">35</option>
                 <option value="36">36</option>
@@ -29,7 +29,7 @@
 
             </select>
             <label>
-                <p>Sale</p><input type="checkbox" name='sale' value=1>
+                <p text-2xl>Цена со скидкой</p><input type="checkbox" name='sale' value=1>
             </label>
 
             <div class="grid grid-cols-2">
@@ -38,20 +38,20 @@
                 <div>
                     <div x-data="{ price: {{(request()->price_min)? request()->price_min:$min_price}} }" class="w-full">
                         <label for="price" class="font-bold text-gray-700" x-text="`от`  + price">{{$min_price}}</label>
-                        <input type="range" min="{{$min_price}}" name="price_min" max="{{$avg_price}}" x-model="price" class="w-full h-2 bg-blue-100 appearance-none" />
+                        <input type="range" min="{{$min_price}}" name="price_min" max="{{$avg_price}}" x-model="price" class="w-full h-2 bg-stone-500 appearance-none" />
                     </div>
                 </div>
                 <div x-data="{ price: {{(request()->price_max)? request()->price_max:$max_price}} }" class="w-full">
                     <label for="price" class="font-bold text-gray-700 block text-right" x-text="`до`  + price">{{$max_price}}</label>
-                    <input type="range" min="{{$avg_price}}" name="price_max" max="{{$max_price}}" x-model="price" class="w-full h-2 bg-blue-100 appearance-none" />
+                    <input type="range" min="{{$avg_price}}" name="price_max" max="{{$max_price}}" x-model="price" class="w-full h-2 bg-stone-500 appearance-none" />
                 </div>
             </div>
         </div>
         <div class="tex-center" text-sm mt-2>
-            <button type="submit" class="btn"> Sort</button>
+            <button type="submit" class="btn w-full mt-4 text-2xl border-2 border-gray-400 hover:border-green-400">Сортировать</button>
         </div>
         <div class="tex-center" text-sm mt-2>
-            <button class="btn"><a href="/products"></a> Reset</button>
+            <button class="btn w-full mt-4 text-2xl border-2 border-gray-400 hover:border-red-400"><a href="/products"></a> Сбросить</button>
         </div>
     </form>
 
@@ -78,11 +78,11 @@
 
                 <div class="content">
                     <h3>{{$product->status}}</h3>
-                    <div class="price">
+                    <div class="flex flex-col">
                         @if($product->discount)
-                        <span> Цена со скидкой {{$product->discount}}</span>
+                        <span class="text-2xl text-green-600"> Цена со скидкой {{$product->discount}}</span>
                         @endif
-                        <span>Обычная цена {{$product->price}}</span>
+                        <span class="text-xl">Обычная цена {{$product->price}}</span>
                     </div>
                     <div class="flex ml-6 items-center">
                         <span class="mr-3">Size</span>

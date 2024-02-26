@@ -19,13 +19,17 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-                serif: ['Merriweather', 'serif'],
+                serif: ['Poppins', 'serif'],
             },
-            
+            colors: {
+                'green': '#97FB57',
+                'gray': '#909090 ',
+                'black': '#121212',
+            },
         },
 
         plugins: [forms],
+        
     },
-    
-    
 }
+

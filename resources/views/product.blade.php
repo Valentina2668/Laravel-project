@@ -1,5 +1,10 @@
 @extends('layouts.base')
 @section('content')
+
+<section class="heading">
+    <h1>products</h1>
+    <p><a href="/">Главная</a> > <a href={{asset('products')}}>Каталог</a> > Товар</p>
+</section>
 <section class="text-gray-600 body-font overflow-hidden">
     <form action="{{asset('add_cart/'.$product->id)}}">
         <div class="container px-5 py-24 mx-auto">
@@ -18,7 +23,7 @@
                         <div class="flex ml-6 items-center">
                             <span class="mr-3">Size</span>
                             <div class="relative">
-                                <select name="size" class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
+                                <select name="size" class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-500 text-base pl-3 pr-10">
                                     @foreach($sizes as $one)
                                     <option value="{{$one}}">{{$one}}</option>
                                     @endforeach
@@ -31,11 +36,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex">
-                        <span class="title-font font-medium text-2xl text-gray-900">{{$product->discount}}</span> <span class="title-font font-medium text-2xl ml-8 text-decoration-line: line-through">{{$product->price}}</span>
+                    <div class="flex justify-center items-center">
+                        <span class="title-font font-medium text-3xl text-green-600">{{$product->discount}}</span> <span class="title-font font-medium text-xl ml-8">{{$product->price}}</span>
 
 
-                        <button type="submit" class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add to cart</button>
+                        <button type="submit" class="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">Add to cart</button>
 
 
                         @if ($favorite) <a href="{{asset('product/' .$favorite->product->id.'/remove_from_favorites')}}" class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-red-500 ml-4">

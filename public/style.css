@@ -22,28 +22,28 @@ section {
 
 .heading {
   text-align: center;
-  background: #04fe2a;
+  background: #97FB57;
 }
 .heading h1 {
   font-size: 3rem;
   text-transform: uppercase;
-  color: #fff;
+  color: #121212;
 }
 .heading p {
-  color: #fff;
+  color: #909090;
   padding-top: 0.7rem;
   font-size: 1.7rem;
 }
 .heading a {
-  color: #fff;
+  color: #909090;
 }
 .heading a:hover {
-  color: #1c1c1c;
+  color: #121212;
 }
 
 .title {
   font-size: 3rem;
-  color: #1c1c1c;
+  color: #121212;
   margin-bottom: 2rem;
   text-align: center;
   padding: 0 1rem;
@@ -56,8 +56,8 @@ section {
 .home .slide {
   margin: 0 auto;
   display: flex;
-  min-height: 85vh;
-  max-width: 80vw;
+  min-height: 80vh;
+  max-width: 90vw;
   padding: 2rem 7%;
   background-size: cover !important;
   background-position: center !important;
@@ -68,22 +68,6 @@ section {
 .home .slide.active {
   display: flex;
 }
-.home .slide .content {
-  padding: 3rem;
-}
-.home .slide .content span {
-  color: #1c1c1c;
-  display: block;
-  font-size: 2rem;
-  animation: fadeIn 0.4s linear 0.2s backwards;
-}
-.home .slide .content h3 {
-  color: #1c1c1c;
-  text-transform: uppercase;
-  padding: 1rem 0;
-  font-size: 6rem;
-  animation: fadeIn 0.4s linear 0.4s backwards;
-}
 .home #next-slide,
 .home #prev-slide {
   position: absolute;
@@ -93,8 +77,8 @@ section {
   width: 6rem;
   line-height: 5.5rem;
   font-size: 4rem;
-  color: #1c1c1c;
-  border: 0.2rem solid #1c1c1c;
+  color: #121212;
+  border: 0.1rem solid #121212;
   background: #fff;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -102,7 +86,7 @@ section {
 }
 .home #next-slide:hover,
 .home #prev-slide:hover {
-  background: #1c1c1c;
+  background: #121212;
   color: #fff;
 }
 .home #prev-slide {
@@ -119,30 +103,30 @@ section {
 }
 .products .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
   gap: 1.5rem;
 }
 .products .box-container .box {
   border-radius: 0.5rem;
   text-align: center;
-  border: 0.2rem solid #1c1c1c;
+  border: 0.1rem solid #121212;
 }
 .products .box-container .box:hover .image .icons {
   transform: translateY(0);
 }
 .products .box-container .box .image {
-  border-radius: 0.5rem;
   overflow: hidden;
   position: relative;
-  height: 25rem;
+  height: 20rem;
   width: 100%;
 }
 .products .box-container .box .image .icons {
+  background-color: #fff;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  border-bottom: 0.2rem solid #1c1c1c;
+  border-bottom: 0.1rem solid #121212;
   transform: translateY(-7rem);
 }
 .products .box-container .box .image .icons a {
@@ -150,10 +134,10 @@ section {
   width: 5rem;
   line-height: 5rem;
   font-size: 2rem;
-  color: #1c1c1c;
+  color: #121212;
 }
 .products .box-container .box .image .icons a:hover {
-  background: #1c1c1c;
+  background: #121212;
   color: #fff;
 }
 .products .box-container .box .image img {
@@ -167,23 +151,7 @@ section {
 }
 .products .box-container .box .content h3 {
   font-size: 2rem;
-  color: #1c1c1c;
-}
-.products .box-container .box .content .stars {
-  padding: 1rem 0;
-}
-.products .box-container .box .content .stars i {
-  font-size: 1.4rem;
-  color: #04fe2a;
-}
-.products .box-container .box .content .price {
-  font-size: 2.2rem;
-  color: #1c1c1c;
-}
-.products .box-container .box .content span {
-  font-size: 1.5rem;
-  text-decoration: line-through;
-  color: #666;
+  color: #121212;
 }
 
 .about .row {
@@ -204,13 +172,13 @@ section {
 }
 .about .row .content h3 {
   font-size: 3.5rem;
-  color: #1c1c1c;
+  color: #121212;
   line-height: 2;
 }
 .about .row .content p {
   font-size: 1.4rem;
   line-height: 2.5;
-  color: #666;
+  color: #909090;
   padding: 1rem 0;
 }
 .about .icon-container {
@@ -222,12 +190,12 @@ section {
 .about .icon-container .icons {
   padding: 3rem 2rem;
   border-radius: 0.5rem;
-  border: 0.2rem solid #1c1c1c;
+  border: 0.1rem solid #121212;
   text-align: center;
   cursor: pointer;
 }
 .about .icon-container .icons:hover {
-  background: #1c1c1c;
+  background: #121212;
 }
 .about .icon-container .icons:hover img {
   filter: invert(1);
@@ -241,7 +209,7 @@ section {
 }
 .about .icon-container .icons h3 {
   font-size: 1.7rem;
-  color: #1c1c1c;
+  color: #121212;
 }
 
 .blogs .box-container {
@@ -252,7 +220,7 @@ section {
 .blogs .box-container .box {
   border-radius: 0.5rem;
   overflow: hidden;
-  border: 0.2rem solid #1c1c1c;
+  border: 0.1rem solid #121212;
 }
 .blogs .box-container .box:hover .image img {
   transform: scale(1.1);
@@ -273,17 +241,17 @@ section {
 }
 .blogs .box-container .box .content h3 {
   font-size: 2rem;
-  color: #1c1c1c;
+  color: #121212;
   line-height: 2;
 }
 .blogs .box-container .box .content p {
   font-size: 1.4rem;
   line-height: 2.5;
-  color: #666;
+  color: #909090;
   padding: 1rem 0;
 }
 .blogs .box-container .box .content .icons {
-  border-top: 0.2rem solid #1c1c1c;
+  border-top: 0.1rem solid #121212;
   padding-top: 2rem;
   margin-top: 2rem;
   display: flex;
@@ -292,14 +260,14 @@ section {
 }
 .blogs .box-container .box .content .icons a {
   font-size: 1.4rem;
-  color: #666;
+  color: #909090;
 }
 .blogs .box-container .box .content .icons a:hover {
-  color: #04fe2a;
+  color: #97FB57;
 }
 .blogs .box-container .box .content .icons a i {
   padding-right: 0.5rem;
-  color: #04fe2a;
+  color: #97FB57;
 }
 
 .contact .row {
@@ -311,16 +279,16 @@ section {
   flex: 1 1 42rem;
   padding: 2rem;
   border-radius: 0.5rem;
-  border: 0.2rem solid #1c1c1c;
+  border: 0.1rem solid #121212;
 }
 .contact .row form .box,
 .contact .row form textarea {
   width: 100%;
-  border-bottom: 0.2rem solid #1c1c1c;
+  border-bottom: 0.1rem solid #121212;
   margin-bottom: 1rem;
   padding: 1rem;
   font-size: 1.6rem;
-  color: #666;
+  color: #909090;
   text-transform: none;
 }
 .contact .row form textarea {
@@ -338,7 +306,7 @@ section {
   margin: 1rem auto;
   max-width: 40rem;
   border-radius: 0.5rem;
-  border: 0.2rem solid #1c1c1c;
+  border: 0.1rem solid #121212;
   padding: 2rem;
   text-align: center;
 }
@@ -346,7 +314,7 @@ section {
 .register-form form h3 {
   font-size: 2.2rem;
   text-transform: uppercase;
-  color: #1c1c1c;
+  color: #121212;
 }
 .login-form form .inputBox,
 .register-form form .inputBox {
@@ -360,7 +328,7 @@ section {
 }
 .login-form form .inputBox span,
 .register-form form .inputBox span {
-  color: #666;
+  color: #909090;
   margin-left: 1rem;
   font-size: 2rem;
 }
@@ -370,7 +338,7 @@ section {
   padding: 1rem;
   background: none;
   font-size: 1.5rem;
-  color: #666;
+  color: #909090;
 }
 .login-form form .flex,
 .register-form form .flex {
@@ -384,26 +352,26 @@ section {
 .register-form form .flex label {
   font-size: 1.5rem;
   cursor: pointer;
-  color: #666;
+  color: #909090;
 }
 .login-form form .flex a,
 .register-form form .flex a {
   font-size: 1.5rem;
-  color: #666;
+  color: #909090;
   margin-left: auto;
 }
 .login-form form .flex a:hover,
 .register-form form .flex a:hover {
-  color: #04fe2a;
+  color: #97FB57;
 }
 .login-form form input[type=submit],
 .register-form form input[type=submit] {
-  background: #1c1c1c;
+  background: #121212;
   color: #fff;
 }
 .login-form form input[type=submit]:hover,
 .register-form form input[type=submit]:hover {
-  background: #04fe2a;
+  background: #97FB57;
 }
 .login-form form .btn,
 .register-form form .btn {
@@ -415,7 +383,7 @@ section {
   grid-template-columns: 1fr 1fr;
   border-radius: 0.5rem;
   overflow: hidden;
-  border: 0.2rem solid #1c1c1c;
+  border: 0.1rem solid #121212;
 }
 .blogs .box:hover .image img {
   transform: scale(1.1);
@@ -436,17 +404,17 @@ section {
 }
 .blogs .box .content h3 {
   font-size: 2rem;
-  color: #1c1c1c;
+  color: #121212;
   line-height: 2;
 }
 .blogs .box .content p {
   font-size: 1.4rem;
   line-height: 2.5;
-  color: #666;
+  color: #909090;
   padding: 1rem 0;
 }
 .blogs .box .content .icons {
-  border-top: 0.2rem solid #1c1c1c;
+  border-top: 0.1rem solid #121212;
   padding-top: 2rem;
   margin-top: 2rem;
   display: flex;
@@ -455,14 +423,14 @@ section {
 }
 .blogs .box .content .icons a {
   font-size: 1.4rem;
-  color: #666;
+  color: #909090;
 }
 .blogs .box .content .icons a:hover {
-  color: #04fe2a;
+  color: #97FB57;
 }
 .blogs .box .content .icons a i {
   padding-right: 0.5rem;
-  color: #04fe2a;
+  color: #97FB57;
 }
 
 .blog .box-container {
@@ -489,17 +457,17 @@ section {
 }
 .blog .box-container .box .content h3 {
   font-size: 2rem;
-  color: #1c1c1c;
+  color: #121212;
   line-height: 2;
 }
 .blog .box-container .box .content p {
   font-size: 1.4rem;
   line-height: 2.5;
-  color: #666;
+  color: #909090;
   padding: 1rem 0;
 }
 .blog .box-container .box .content .icons {
-  border-top: 0.2rem solid #1c1c1c;
+  border-top: 0.1rem solid #121212;
   padding-top: 2rem;
   margin-top: 2rem;
   display: flex;
@@ -508,14 +476,14 @@ section {
 }
 .blog .box-container .box .content .icons a {
   font-size: 1.4rem;
-  color: #666;
+  color: #909090;
 }
 .blog .box-container .box .content .icons a:hover {
-  color: #04fe2a;
+  color: #97FB57;
 }
 .blog .box-container .box .content .icons a i {
   padding-right: 0.5rem;
-  color: #04fe2a;
+  color: #97FB57;
 }
 
 .footer .box-container {
@@ -525,28 +493,28 @@ section {
 }
 .footer .box h3 {
   font-size: 2.2rem;
-  color: #1c1c1c;
+  color: #121212;
   padding: 1rem 0;
 }
 .footer .box a {
   display: block;
   font-size: 1.4rem;
-  color: #666;
+  color: #909090;
   padding: 1rem 0;
 }
 .footer .box a:hover {
-  color: #04fe2a;
+  color: #97FB57;
 }
 .footer .box a:hover i {
   padding-right: 2rem;
 }
 .footer .box a i {
-  color: #04fe2a;
+  color: #97FB57;
   padding-right: 0.5rem;
 }
 .footer .box p {
   font-size: 1.5rem;
-  color: #666;
+  color: #909090;
   margin-bottom: 1rem;
 }
 .footer .box form input[type=email] {
@@ -565,11 +533,11 @@ section {
   padding-top: 2.5rem;
   margin-top: 2.5rem;
   font-size: 2rem;
-  color: #666;
-  border-top: 0.2rem solid #1c1c1c;
+  color: #909090;
+  border-top: 0.1rem solid #121212;
 }
 .credits span {
-  color: #04fe2a;
+  color: #97FB57;
 }
 
 @media (max-width: 1200px) {

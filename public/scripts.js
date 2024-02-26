@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     button.addEventListener('click', function () {
         menu.classList.toggle('hidden');
     });
+    
 });
 let slides = document.querySelectorAll('.home .slide');
 let index = 0;

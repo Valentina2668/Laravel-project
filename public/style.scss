@@ -9,17 +9,17 @@
     outline: none;
     border: none;
     text-transform: capitalize;
-  
-    
+
+
     // transition: all .2s linear;
 }
 
-$bright: #04fe2a;
-$black: #1c1c1c;
+$bright: #97FB57;
+$black: #121212;
 $white: #fff;
-$light-color: #666;
+$light-color: #909090;
 $light-bg: #eee;
-$border: .2rem solid $black;
+$border: .1rem solid $black;
 
 @mixin grid($val) {
     display: grid;
@@ -31,7 +31,7 @@ html {
     scroll-behavior: smooth;
     font-size: 62.5%;
     overflow-x: hidden;
-    
+
 }
 
 section {
@@ -45,17 +45,17 @@ section {
     h1 {
         font-size: 3rem;
         text-transform: uppercase;
-        color: $white;
+        color: $black;
     }
 
     p {
-        color: $white;
+        color: $light-color;
         padding-top: .7rem;
         font-size: 1.7rem;
     }
 
     a {
-        color: $white;
+        color: $light-color;
 
         &:hover {
             color: $black;
@@ -80,8 +80,8 @@ section {
     .slide {
         margin: 0 auto;
         display: flex;
-        min-height: 85vh;
-        max-width: 80vw;
+        min-height: 80vh;
+        max-width: 90vw;
         padding: 2rem 7%;
         background-size: cover !important;
         background-position: center !important;
@@ -91,27 +91,6 @@ section {
 
         &.active {
             display: flex;
-        }
-
-        .content {
-            padding: 3rem;
-
-            span {
-
-                color: $black;
-                display: block;
-                font-size: 2rem;
-                animation: fadeIn .4s linear .2s backwards;
-            }
-
-            h3 {
-                color: $black;
-                text-transform: uppercase;
-                padding: 1rem 0;
-                font-size: 6rem;
-                animation: fadeIn .4s linear .4s backwards;
-            }
-           
         }
     }
 
@@ -142,47 +121,6 @@ section {
     }
 }
 
-// .banner {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     grid-gap: 2em;
-
-
-
-//     .box {
-//         position: relative;
-//         height: 30rem;
-//         overflow: hidden;
-//         border-radius: .5rem;
-
-//         &:hover img {
-//             transform: scale(1.1);
-
-//         }
-
-//         img {
-//             height: 100%;
-//             width: 100%;
-//             object-fit: cover;
-//         }
-
-//         .content {
-//             position: absolute;
-//             top: 40%;
-//             right: 3rem;
-//             transform: translateY(-80%);
-
-//             h3 {
-//                 font-size: 2rem;
-//                 color: $black;
-//                 padding-top: 1rem;
-//             }
-           
-//         }
-//     }
-
-// }
-
 .products {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -193,26 +131,27 @@ section {
     }
 
     .box-container {
-        @include grid(32rem);
+        @include grid(26rem);
 
 
         .box {
             border-radius: .5rem;
             text-align: center;
             border: $border;
+        
 
             &:hover .image .icons {
                 transform: translateY(0);
             }
 
             .image {
-                border-radius: .5rem;
                 overflow: hidden;
                 position: relative;
-                height: 25rem;
+                height: 20rem;
                 width: 100%;
 
                 .icons {
+                    background-color: #fff;
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -250,29 +189,7 @@ section {
                     font-size: 2rem;
                     color: $black;
                 }
-
-                .stars {
-                    padding: 1rem 0;
-
-                    i {
-                        font-size: 1.4rem;
-                        color: $bright;
-                    }
-                }
-
-                .price {
-                    font-size: 2.2rem;
-                    color: $black;
-                }
-
-
-                span {
-                    font-size: 1.5rem;
-                    text-decoration: line-through;
-                    color: $light-color;
-
-                }
-
+               
             }
         }
     }

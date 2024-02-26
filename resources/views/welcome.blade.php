@@ -4,26 +4,26 @@
 </section>
 <section class="home">
     <div class="slide active" style="background: url(images/home-bg-1.jpg) no-repeat;">
-        <div class="content bg-transparent">
-            <h3 class="bg-transparent text-white">Fly Up</h3>
-            <button class="text-3xl text-grey-900 py-3 px-10 rounded-lg border-1 border-gray-600 hover:border-green-600">
-                <a href="/products">shop now</a>
+        <div class="bg-transparent flex flex-col">
+            <h3 class="bg-transparent text-2xl text-white pb-10 ">Fly Up</h3>
+            <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm px-6 py-2.5 text-center me-4 mb-4">
+            <a href="/products">Shop now</a></button>                
             </button>
         </div>
     </div>
     <div class="slide" style="background: url(images/home-bg-2.jpg) no-repeat;">
-        <div class="content bg-transparent">
-            <h3>Be Invincible</h3>
-            <button class="text-3xl text-gray-900 py-3 px-10 rounded-lg border-1 border-gray-600 hover:border-green-600">
-                <a href="/products">shop now</a>
+        <div class="bg-transparent">
+            <h3 class="bg-transparent text-2xl text-white pb-10 ">Be Invincible</h3>
+            <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm px-6 py-2.5 text-center me-4 mb-4">
+            <a href="/products">Shop now</a></button>                
             </button>
         </div>
     </div>
     <div class="slide" style="background: url(images/home-bg-3.jpg) no-repeat;">
-        <div class="content bg-transparent">
-            <h3 >Run fast</h3>
-            <button class="text-3xl text-gray-900 py-3 px-10 rounded-lg border-1 border-gray-600 hover:border-green-600">
-                <a href="/products">shop now</a>
+        <div class="bg-transparent">
+            <h3 class="bg-transparent text-2xl text-white pb-10 ">Run fast</h3>
+            <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm px-6 py-2.5 text-center me-4 mb-4">
+            <a href="/products">Shop now</a></button>                
             </button>
         </div>
     </div>
