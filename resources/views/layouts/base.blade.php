@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav class="bg-white dark:bg-gray-900 shadow-md">
+    <nav class="bg-white dark:bg-gray-900">
         <div class="max-w-screen-xl flex items-center justify-between mx-auto p-6">
             <a href="/" class="flex items-center">
                 <img src="./images/logo.jpg" class="h-14 rounded-full" alt="Logo" />
@@ -40,7 +40,7 @@
                         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                         </svg>
-                        <span class="sr-only">Search</span>
+                        <span class="sr-only">Поиск</span>
                     </button>
 
                     <div class="relative hidden md:block">
@@ -140,36 +140,36 @@
     <section class="footer">
         <div class="box-container">
             <div class="box">
-                <h3>quick links</h3>
-                <a href="/"><i class="fas fa-angle-right"></i>home</a>
-                <a href="/products"><i class="fas fa-angle-right"></i>catalog</a>
-                <a href="/about"><i class="fas fa-angle-right"></i>about</a>
-                <a href="/blog"><i class="fas fa-angle-right"></i>blogs</a>
-                <a href="/contact"><i class="fas fa-angle-right"></i>contact</a>
+                <h3 class="normal-case">Быстрые ссылки</h3>
+                <a href="/"><i class="fas fa-angle-right"></i>Домой</a>
+                <a href="/products"><i class="fas fa-angle-right"></i>Каталог</a>
+                <a href="/about"><i class="fas fa-angle-right"></i>О нас</a>
+                <a href="/blog"><i class="fas fa-angle-right"></i>Блог</a>
+                <a href="/contact"><i class="fas fa-angle-right"></i>Контакты</a>
 
-                <a href="/cart"><i class="fas fa-angle-right"></i>cart</a>
+                <a href="/cart"><i class="fas fa-angle-right"></i>Корзина</a>
             </div>
 
             <div class="box">
-                <h3>extra links</h3>
+                <h3 class="normal-case">Дополнительные ссылки</h3>
                 @if(auth()->guest())
-                <a href="/login"><i class="fas fa-angle-right"></i>login</a>
-                <a href="/register"><i class="fas fa-angle-right"></i>register</a>
+                <a href="/login"><i class="fas fa-angle-right"></i>Войти</a>
+                <a href="/register"><i class="fas fa-angle-right"></i>Регистрация</a>
                 @else
-                <a href="/profile"><i class="fas fa-angle-right"></i> my account </a>
-                <a href="#"><i class="fas fa-angle-right"></i> my order </a>
-                <a href="#"><i class="fas fa-angle-right"></i> my wishlist </a>
+                <a href="/profile"><i class="fas fa-angle-right"></i> Мой Профиль </a>
+                <a href="#"><i class="fas fa-angle-right"></i> Мои заказы </a>
+                <a href="#"><i class="fas fa-angle-right"></i> Избранное </a>
                 @endif
                 <a href="/terms"><i class="fas fa-angle-right"></i> terms of use </a>
                 <a href="/policy"><i class="fas fa-angle-right"></i> privacy policy </a>
             </div>
             <div class="box">
-                <h3 class="pb-6">Время работы</h3>
+                <h3 class="pb-6 normal-case">Время работы</h3>
                 <p class="pb-6">Пн-Пт: <br>10:00-20:00</p>
                 <p class="pb-6">Сб-Вс: <br>12:00-20:00</p>
             </div>
             <div class="box">
-                <h3>follow us</h3>
+                <h3 class="normal-case">Подписывайся на нас</h3>
                 <a href="#"><i class="fab fa-facebook-f"></i> facebook </a>
                 <a href="#"><i class="fab fa-twitter"></i> twitter </a>
                 <a href="#"><i class="fab fa-instagram"></i> instagram </a>
@@ -178,11 +178,12 @@
                 <a href="#"><i class="fab fa-github"></i> github </a> -->
             </div>
             <div class="box">
-                <h3>newsletters</h3>
-                <p>subscribe for latest updates</p>
+                <h3 class="normal-case">Рассылка</h3>
+                <p>Подпишись на обновления</p>
                 <form action="">
-                    <input type="email" placeholder="enter your email">
-                    <input type="submit" value="subscribe" class="btn">
+                    <input type="email" placeholder="Введите адрес электронной почты">
+                    <input type="submit" value="subscribe" class=" mt-3 py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-green-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                    
                 </form>
             </div>
         </div>
