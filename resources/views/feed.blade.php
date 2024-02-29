@@ -8,7 +8,6 @@
     @foreach ($feeds as $feed)
     <div class="box-container">
         <div class="box">
-            Hey there
             @if ($feed->model_name == 'Product')
             @include('includes.product_one', ['product'=>$feed->product])
             @elseif($feed->model_name == 'Catalog')

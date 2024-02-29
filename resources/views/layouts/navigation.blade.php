@@ -13,13 +13,16 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="/info" :active="request()->routeIs('home')">
-                        home
+                        Главная
                     </x-nav-link>
                     <x-nav-link href="/about" :active="request()->routeIs('about')">
-                        About
+                        О нас
                     </x-nav-link>
                     <x-nav-link href="/catalog" :active="request()->routeIs('catalog')">
-                        Catalog
+                        Каталог
+                    </x-nav-link>
+                    <x-nav-link href="/feed" :active="request()->routeIs('feed')">
+                        Новые поступления
                     </x-nav-link>
                 </div>
             </div>

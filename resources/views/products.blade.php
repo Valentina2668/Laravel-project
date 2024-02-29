@@ -26,15 +26,12 @@
                 <option value="35">35</option>
                 <option value="36">36</option>
                 <option value="37">37</option>
-
             </select>
             <label>
                 <p text-2xl>Цена со скидкой</p><input type="checkbox" name='sale' value=1>
             </label>
 
             <div class="grid grid-cols-2">
-
-
                 <div>
                     <div x-data="{ price: {{(request()->price_min)? request()->price_min:$min_price}} }" class="w-full">
                         <label for="price" class="font-bold text-gray-700" x-text="`от`  + price">{{$min_price}}</label>

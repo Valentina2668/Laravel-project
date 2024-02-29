@@ -26,6 +26,7 @@ export default {
                 'gray': '#909090 ',
                 'black': '#121212',
             },
+            
         },
 
         plugins: [forms],
