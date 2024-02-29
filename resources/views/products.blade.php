@@ -12,11 +12,13 @@
     <form class="p-2 m-3" action="{{asset('products')}}">
         <div class="select-catalog text-2xl">
             <select name='catalog' class="catalog-name ">
-                <option value=0 class="text-xl"> Выберите каталог
+                <option value=0 class="text-xl normal-case"> Выберите каталог
                 </option>
                 <option value=1 class="text-xl">Мужские
                 </option>
                 <option value=2 class="text-xl">Женские
+                </option>
+                <option value=4 class="text-xl normal-case">Новые поступления
                 </option>
             </select>
             <select name="size">

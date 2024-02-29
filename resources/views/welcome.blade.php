@@ -40,21 +40,21 @@
     </div>
     <div class="relative overflow-hidden h-400">
         <img src="images/banner-1.png" class="h-auto max-w-full object-cover hover:scale-110">
-        <h3 class="bg-transparent text-5xl text-white pb-10 absolute top-6 right-3">Новые поступления</h3>
+        <h3 class="bg-transparent text-5xl text-white pb-10 absolute top-6 right-3 normal-case">Новые поступления</h3>
         <button class="absolute top-24 right-3 bg-orange-50 text-3xl text-gray-900 py-3 px-10 rounded-lg border-1 border-gray-600 hover:border-green-600">
             <a href="/feed">Купить</a>
         </button>
     </div>
     <div class="relative overflow-hidden h-400">
         <img src="images/banner-woman.png" class="h-auto max-w-full object-cover hover:scale-110">
-        <h3 class="bg-transparent text-5xl text-white pb-10 absolute top-6 right-3">Для женщин</h3>
+        <h3 class="bg-transparent text-5xl text-white pb-10 absolute top-6 right-3 normal-case">Для женщин</h3>
         <button class="absolute top-24 right-3 bg-orange-50 text-3xl text-gray-900 py-3 px-10 rounded-lg border-1 border-gray-600 hover:border-green-600">
             <a href="/products?catalog=2">Купить</a>
         </button>
     </div>
     <div class="relative overflow-hidden h-400">
         <img src="images/banner-man.png" class="max-w-100% h-100% object-cover hover:scale-110">
-        <h3 class="bg-transparent text-5xl text-black pb-10 absolute top-6 right-3">Для мужчин</h3>
+        <h3 class="bg-transparent text-5xl text-black pb-10 absolute top-6 right-3 normal-case">Для мужчин</h3>
         <button class="absolute top-24 right-3  bg-orange-50 text-3xl text-gray-900 py-3 px-10 rounded-lg border-1 border-gray-600 hover:border-green-600">
             <a href="/products?catalog=1">Купить</a>
         </button>

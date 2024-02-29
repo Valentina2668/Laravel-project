@@ -270,34 +270,16 @@ section {
   color: #97FB57;
 }
 
-.contact .row {
+.row {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
 }
-.contact .row form {
+.row .info {
+  padding-left: 7px;
+}
+.row .map {
   flex: 1 1 42rem;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  border: 0.1rem solid #121212;
-}
-.contact .row form .box,
-.contact .row form textarea {
-  width: 100%;
-  border-bottom: 0.1rem solid #121212;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  font-size: 1.6rem;
-  color: #909090;
-  text-transform: none;
-}
-.contact .row form textarea {
-  height: 15rem;
-  resize: none;
-}
-.contact .row .map {
-  flex: 1 1 42rem;
-  border-radius: 0.5rem;
   width: 100%;
 }
 
@@ -390,7 +372,7 @@ section {
 }
 .blogs .box .image {
   width: 100%;
-  height: 25rem;
+  height: auto;
   overflow: hidden;
 }
 .blogs .box .image img {

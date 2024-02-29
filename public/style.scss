@@ -336,43 +336,19 @@ section {
     }
 }
 
-.contact {
-    .row {
-        display: flex;
+.row {
+    display: flex;
         flex-wrap: wrap;
         gap: 2rem;
 
-        form {
-            flex: 1 1 42rem;
-            padding: 2rem;
-            border-radius: .5rem;
-            border: $border;
-
-            .box,
-            textarea {
-                width: 100%;
-                border-bottom: $border;
-                margin-bottom: 1rem;
-                padding: 1rem;
-                font-size: 1.6rem;
-                color: $light-color;
-                text-transform: none;
-
-            }
-
-            textarea {
-                height: 15rem;
-                resize: none;
-            }
+        .info{
+            padding-left: 7px;
         }
-
         .map {
             flex: 1 1 42rem;
-            border-radius: .5rem;
             width: 100%;
 
         }
-    }
 }
 
 .login-form,
@@ -471,7 +447,7 @@ section {
 
     .image {
         width: 100%;
-        height: 25rem;
+        height: auto;
         overflow: hidden;
 
         img {
