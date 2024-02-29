@@ -503,7 +503,7 @@ section {
   padding: 1rem 0;
 }
 .footer .box a:hover {
-  color: #97FB57;
+  color: green;
 }
 .footer .box a:hover i {
   padding-right: 2rem;
