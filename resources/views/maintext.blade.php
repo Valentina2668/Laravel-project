@@ -2,7 +2,7 @@
 @section('content')
 <section class="heading">
         <h1> {!!$maintext->name!!}</h1>
-        <p><a href="/">home</a>&gt;&gt; {!!$maintext->name!!} </p>
+        <p><a href="/">Главная </a> &gt;&gt; {!!$maintext->name!!} </p>
     </section>
 
     <div class="py-12">

@@ -7,6 +7,7 @@
 </section>
 
 <section class="products">
+    <div></div>
     <div class="box-container">
         @foreach($favorites as $favorite)
         <div class="box">

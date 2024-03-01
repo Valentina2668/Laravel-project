@@ -1,13 +1,40 @@
-<div class="box-container">
 <div class="box">
-    <div class="icons">
-        <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-shopping-cart"></a>
-    </div>
-    <h3>{{$product->name}}</h3>
-    <img src="{{asset('/storage/'.$product->picture)}}" alt="Image">
-    <div class="price">${{$product->price}}
-    </div>
-    <a href="{{asset('product/'.$product->id)}}" class="btn">Подробнее о товаре</a>
-</div>
+    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+        {{$product->name}}
+    </h1>
+    <form action="{{asset('add_cart/'.$product->id)}}">
+        @csrf
+        <div class="image">
+            <div class="icons">
+                <button type="submit"><a class="fas fa-shopping-cart"></a></button>
+                <a href="{{asset('product/' .$product->id.'/add_to_favorites')}}" class="fas fa-heart"></a>
+                <a href="{{asset('product/'.$product->id)}}" class="fas fa-eye"></a>
+            </div>
+            <img src="/storage/{{$product->picture}}" alt="">
+        </div>
+        <div class="content">
+            <h3>{{$product->status}}</h3>
+            <div class="flex flex-col">
+                @if($product->discount)
+                <span class="text-2xl text-green-600"> Цена со скидкой {{$product->discount}}</span>
+                @endif
+                <span class="text-xl">Обычная цена {{$product->price}}</span>
+            </div>
+            <div class="flex ml-6 items-center">
+                <span class="mr-3">Size</span>
+                <div class="relative">
+                    <select name="size" class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
+                        @foreach(explode(',',$product->size) as $one)
+                        <option value="{{$one}}">{{$one}}</option>
+                        @endforeach
+                    </select>
+                    <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
+                            <path d="M6 9l6 6 6-6"></path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>

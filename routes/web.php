@@ -15,6 +15,7 @@ use App\Http\Controllers;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('feed', [Controllers\FeedController::class, 'getIndex']);
 
 Route::get('/', function () {
     return view('welcome');
@@ -42,7 +43,6 @@ Route::get('product/{product}', [Controllers\ProductController::class, 'getOne']
 Route::get('allproducts', [Controllers\ProductController::class, 'getAll']);
 Route::get('blog', [Controllers\BlogController::class, 'getIndex']);
 Route::get('blog/{blog}', [Controllers\BlogController::class, 'getOne']);
-Route::get('feed', [Controllers\FeedController::class, 'getIndex']);
 Route::get('add_cart/{id}', [Controllers\OrderController::class, 'addCookie']);
 Route::get('cart',[Controllers\OrderController::class, 'cart'])->name('cart');
 Route::get('cart/delete/{product}', [Controllers\OrderController::class,'cartDelete']);

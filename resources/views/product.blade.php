@@ -2,7 +2,7 @@
 @section('content')
 
 <section class="heading">
-    <h1>products</h1>
+    <h1>Товары</h1>
     <p><a href="/">Главная</a> > <a href={{asset('products')}}>Каталог</a> > Товар</p>
 </section>
 <section class="text-gray-600 body-font overflow-hidden">

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Интернет-магазин спортивной обуви</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="{{asset("style.css")}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     @stack('styles')
-    <script src="/scripts.js" defer></script>
+    <script src="/{{asset("scripts.js")}}" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     @stack('scripts')
@@ -19,7 +19,7 @@
     <nav class="bg-white dark:bg-gray-900">
         <div class="max-w-screen-xl flex items-center justify-between mx-auto p-6">
             <a href="/" class="flex items-center">
-                <img src="./images/logo.jpg" class="h-14 rounded-full" alt="Logo" />
+                <img src="{{asset('/images/logo.jpg')}}" class="h-14 rounded-full" alt="Logo" />
                 <span class="self-center text-2xl ml-2 font-semibold whitespace-nowrap dark:text-white">HighProfile</span>
             </a>
 
@@ -50,7 +50,7 @@
                             </svg>
                             <span class="sr-only">Search icon</span>
                         </div>
-                        <input type="text" id="search-navbar" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Поиск...">
+                        <input type="text" name="search"id="search-navbar" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Поиск...">
                     </div>
                 </form>
 
