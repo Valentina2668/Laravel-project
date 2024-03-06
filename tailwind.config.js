@@ -11,6 +11,9 @@ export default {
         "./resources/**/*.js",
         "./resources/**/*.vue",
         "./src/**/*.{html,js}",
+        './vendor/filament/**/*.blade.php',
+        './vendor/danharrin/filament-blog/resources/views/**/*.blade.php', // Your plugin's vendor directory
+        './vendor/danharrin/filament-blog_one/resources/views/**/*.blade.php'// Your plugin's vendor directory
 
 
     ],
@@ -21,16 +24,17 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
                 serif: ['Poppins', 'serif'],
             },
+            
             colors: {
                 'green': '#97FB57',
                 'gray': '#909090 ',
                 'black': '#121212',
             },
-            
+
         },
 
         plugins: [forms],
-        
+
     },
 }
 

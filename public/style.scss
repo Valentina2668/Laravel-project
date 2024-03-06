@@ -8,7 +8,7 @@
     text-decoration: none;
     outline: none;
     border: none;
-    text-transform: capitalize;
+    // text-transform: capitalize;
 
 
     // transition: all .2s linear;
@@ -200,10 +200,10 @@ section {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 1rem;
 
         .image {
-            flex: 1 1 42rem;
+            flex: 1 1 50rem;
 
             img {
                 width: 100%;
@@ -216,14 +216,16 @@ section {
             flex: 1 1 42rem;
 
             h3 {
-                font-size: 3.5rem;
+                font-style: normal;
+                font-size: 2.5rem;
                 color: $black;
-                line-height: 2;
+                line-height: 1;
             }
 
             p {
-                font-size: 1.4rem;
-                line-height: 2.5;
+                font-size: small;
+                font-style: normal;
+                line-height: 1.5;
                 color: $light-color;
                 padding: 1rem 0;
             }
@@ -270,7 +272,8 @@ section {
 }
 
 .blogs .box-container {
-    @include grid(32rem);
+    display: grid;
+    // @include grid(58rem);
 
     .box {
         border-radius: .5rem;
@@ -338,17 +341,18 @@ section {
 
 .row {
     display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
 
-        .info{
-            padding-left: 7px;
-        }
-        .map {
-            flex: 1 1 42rem;
-            width: 100%;
+    .info {
+        padding-left: 7px;
+    }
 
-        }
+    .map {
+        flex: 1 1 42rem;
+        width: 100%;
+
+    }
 }
 
 .login-form,
@@ -433,10 +437,10 @@ section {
     }
 }
 
-.blogs .box {
+.blogs  .box {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+    
     border-radius: .5rem;
     overflow: hidden;
     border: $border;
@@ -458,19 +462,21 @@ section {
     }
 
     .content {
-        padding: 2rem;
+        padding: 1rem;
 
         h3 {
+            font-style: normal;
             font-size: 2rem;
             color: $black;
             line-height: 2;
         }
 
         p {
+            font-style: normal;
             font-size: 1.4rem;
-            line-height: 2.5;
             color: $light-color;
             padding: 1rem 0;
+            font-style: normal;
         }
 
         .icons {
@@ -502,17 +508,22 @@ section {
 
 .blog {
     .box-container {
+        grid-row-gap: 2px ;
+
         margin: 0 auto;
-        padding-top: 2rem;
+        padding-top: 1rem;
+        
+        grid-row-gap: 2px ;
 
 
         .box {
             display: grid;
-            grid-template-rows: 1fr 1fr 1fr;
-
+            grid-template-rows: 1fr 2fr 1fr;
+            
             .image {
-                width: 100%;
-                height: 50vh;
+                margin: 0 auto;
+                width: 50%;
+                height: auto;
                 overflow: hidden;
 
                 img {
@@ -523,18 +534,28 @@ section {
             }
 
             .content {
-                padding: 2rem;
+                align-items: center;
 
-                h3 {
+                h2 {
+
+                    text-align: center;
+                    font-style: normal;
                     font-size: 2rem;
-                    color: $black;
-                    line-height: 2;
+                    color: $bright;
+
                 }
 
                 p {
+
+                    font-style: normal;
                     font-size: 1.4rem;
-                    line-height: 2.5;
                     color: $light-color;
+                    padding: 1rem 0;
+                }
+
+                li {
+                    font-size: 1.4rem;
+                    font-style: normal;
                     padding: 1rem 0;
                 }
 
@@ -564,6 +585,15 @@ section {
             }
         }
     }
+}
+
+
+
+p {
+    font-size: 1.4rem;
+    color: $light-color;
+    padding: 1rem 0;
+    font-style: normal;
 }
 
 
@@ -673,43 +703,43 @@ section {
 }
 
 
-@media (max-width:768px) {
-    #menu-btn {
-        display: inline-block;
-    }
+// @media (max-width:768px) {
+//     #menu-btn {
+//       display: inline-block;
+//     }
 
-    .header {
-        padding: 2rem;
+//     .header {
+//         padding: 2rem;
 
-        .navbar {
-            position: absolute;
-            top: 99%;
-            left: 0;
-            right: 0;
-            background: $white;
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+//         .navbar {
+//             position: absolute;
+//             top: 99%;
+//             left: 0;
+//             right: 0;
+//             background: $white;
+//             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
-            &.active {
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            }
+//             &.active {
+//                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+//             }
 
-            ul li {
-                width: 100%;
+//             ul li {
+//                 width: 100%;
 
-                ul {
-                    position: relative;
-                    width: 100%;
+//                 ul {
+//                     position: relative;
+//                     width: 100%;
 
-                    li a {
-                        padding-left: 4rem;
-                    }
-                }
-            }
-        }
-    }
+//                     li a {
+//                         padding-left: 4rem;
+//                     }
+//                 }
+//             }
+//         }
+//     }
 
 
-}
+// }
 
 @media (max-width:450px) {
     html {
@@ -724,16 +754,15 @@ section {
         display: flex;
         flex-direction: column;
     }
+}
 
-    // .banner {
-    //     display: flex;
-    //     flex-direction: column;
-    // }
-
-    .blogs {
-        .box {
-            display: flex;
-            flex-direction: column;
-        }
+// .banner {
+//     display: flex;
+//     flex-direction: column;
+// }
+@media (max-width:540px) {
+    .blogs .box {
+        display: flex;
+        flex-direction: column;
     }
 }

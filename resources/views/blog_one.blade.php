@@ -9,13 +9,12 @@
                 <img src="{{asset('/storage/'.$blog->picture)}}" alt="">
             </div>
             <div class="content">
-                <h3>{{$blog->name}}</h3>
-                <p class="normal-case">{!!$blog->description!!}</p>
-                <div class="normal-case">{!!$blog->content!!}</div>
+                <h1 class="text-center normal-case text-5xl pt-10">{{$blog->name}}</h1>
+                <h2>{!!$blog->description!!}</h2>
+                <p>{!!$blog->content!!}</p>
                 <div class="icons">
                     <a href="#"><i class="fas fa-clock"></i>Дата {{optional ($blog->created_at)->diffForHumans()}}</a>
                     <a href="#"><i class="fas fa-user"></i>Автор {{$blog->user->name}}</a>
-
                 </div>
             </div>
         </div>

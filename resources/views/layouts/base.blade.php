@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="{{asset("style.css")}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     @stack('styles')
-    <script src="/{{asset("scripts.js")}}" defer></script>
+    <script src="{{asset("/scripts.js")}}" defer></script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     @stack('scripts')
@@ -17,7 +18,7 @@
 
 <body>
     <nav class="bg-white dark:bg-gray-900">
-        <div class="max-w-screen-xl flex items-center justify-between mx-auto p-6">
+        <div class="max-w-screen-xl flex place-items-start justify-between mx-auto p-6">
             <a href="/" class="flex items-center">
                 <img src="{{asset('/images/logo.jpg')}}" class="h-14 rounded-full" alt="Logo" />
                 <span class="self-center text-2xl ml-2 font-semibold whitespace-nowrap dark:text-white">HighProfile</span>
@@ -72,7 +73,7 @@
                     <input type="text" id="search-navbar" class="block w-full p-6 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Поиск...">
                 </div>
 
-                <ul class="flex flex-col p-6 md:p-0 mt-4 font-medium bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <ul class="flex flex-col md: font-medium bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li>
                         <x-nav-link href="/">
                             <p class="block py-2 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> Главная</p>
