@@ -14,13 +14,32 @@
             <select name='catalog' class="catalog-name ">
                 <option value=0 class="text-xl normal-case"> Выберите каталог
                 </option>
-                <option value=1 class="text-xl">Мужские
+                <option value=1 class="text-xl" 
+                @if(request()->has('catalog'))
+                    @if(request()->get('catalog')==1)
+                    selected
+                    @endif
+                @endif
+                >Мужские
                 </option>
-                <option value=2 class="text-xl">Женские
+                <option value=2 class="text-xl"
+                @if(request()->has('catalog'))
+                    @if(request()->get('catalog')==2)
+                    selected
+                    @endif
+                @endif
+                >Женские
                 </option>
-                <option value=4 class="text-xl normal-case">Новые поступления
+                <option value=4 class="text-xl normal-case"
+                @if(request()->has('catalog'))
+                    @if(request()->get('catalog')==4)
+                    selected
+                    @endif
+                @endif
+                >Новые поступления
                 </option>
             </select>
+            
             <select name="size">
                 <option value="" class="text-xl">
                     Выберите размер
@@ -29,9 +48,9 @@
                 <option value="36">36</option>
                 <option value="37">37</option>
             </select>
-            <label>
+            <!-- <label>
                 <p text-2xl>Цена со скидкой</p><input type="checkbox" name='sale' value=1>
-            </label>
+            </label> -->
 
             <div class="grid grid-cols-2">
                 <div>
@@ -50,7 +69,7 @@
             <button type="submit" class="btn w-full mt-4 text-2xl border-2 border-gray-400 hover:border-green-400">Сортировать</button>
         </div>
         <div class="tex-center" text-sm mt-2>
-            <button class="btn w-full mt-4 text-2xl border-2 border-gray-400 hover:border-red-400"><a href="/products"></a> Сбросить</button>
+        <a href="/products" class="btn w-full mt-4 text-2xl border-2 border-gray-400 hover:border-green-400">Сбросить</a> 
         </div>
     </form>
 
