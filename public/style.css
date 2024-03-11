@@ -537,21 +537,21 @@ section {
     right: 12px;
   }
 }
-@media (max-width: 450px) {
-  html {
-    font-size: 50%;
-  }
-  .home .slide .content h3 {
-    font-size: 4rem;
+@media (max-width: 540px) {
+  .blogs .box {
+    display: flex;
+    flex-direction: column;
   }
   .products {
     display: flex;
     flex-direction: column;
   }
 }
-@media (max-width: 540px) {
-  .blogs .box {
-    display: flex;
-    flex-direction: column;
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .home .slide .content h3 {
+    font-size: 4rem;
   }
 }/*# sourceMappingURL=style.css.map */

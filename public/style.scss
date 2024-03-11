@@ -653,30 +653,6 @@ section {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer {
     .box-container {
         @include grid(25rem);
@@ -773,7 +749,16 @@ section {
     }
 
 }
-
+@media (max-width:540px) {
+    .blogs .box {
+        display: flex;
+        flex-direction: column;
+    }
+    .products {
+        display: flex;
+        flex-direction: column;
+    }
+}
 @media (max-width:450px) {
     html {
         font-size: 50%;
@@ -783,15 +768,6 @@ section {
         font-size: 4rem;
     }
 
-    .products {
-        display: flex;
-        flex-direction: column;
-    }
+    
 }
 
-@media (max-width:540px) {
-    .blogs .box {
-        display: flex;
-        flex-direction: column;
-    }
-}
