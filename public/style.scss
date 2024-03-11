@@ -8,10 +8,8 @@
     text-decoration: none;
     outline: none;
     border: none;
-    // text-transform: capitalize;
+    transition: all .2s linear;
 
-
-    // transition: all .2s linear;
 }
 
 $bright: #97FB57;
@@ -32,10 +30,21 @@ html {
     font-size: 62.5%;
     overflow-x: hidden;
 
+
 }
 
+p {
+    font-size: 1.4rem;
+    line-height: 2.5;
+    color: $light-color;
+    padding: 1rem 0;
+}
+
+
 section {
-    padding: 2rem 9%;
+    padding: 4rem 9%;
+    max-width: 90vw;
+    margin: 0 auto;
 }
 
 .heading {
@@ -72,6 +81,9 @@ section {
 
 }
 
+.menu {
+    display: flex;
+}
 
 .home {
     padding: 6px;
@@ -271,6 +283,105 @@ section {
     }
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .info {
+        padding-left: 7px;
+    }
+
+    .map {
+        flex: 1 1 42rem;
+        width: 100%;
+
+    }
+}
+
+// .login-form,
+// .register-form {
+//     form {
+//         margin: 1rem auto;
+//         max-width: 40rem;
+//         border-radius: .5rem;
+//         border: $border;
+//         padding: 2rem;
+//         text-align: center;
+
+//         h3 {
+//             font-size: 2.2rem;
+//             text-transform: uppercase;
+//             color: $black;
+//         }
+
+//         .inputBox {
+//             margin: 1rem 0;
+//             display: flex;
+//             border-radius: .5rem;
+//             background: $light-bg;
+//             padding: .5rem 1rem;
+//             align-items: center;
+//             gap: 1rem;
+
+//             span {
+//                 color: $light-color;
+//                 margin-left: 1rem;
+//                 font-size: 2rem;
+//             }
+
+//             input {
+//                 width: 100%;
+//                 padding: 1rem;
+//                 background: none;
+//                 font-size: 1.5rem;
+//                 color: $light-color;
+
+//             }
+//         }
+
+//         .flex {
+//             display: flex;
+//             align-items: center;
+//             gap: .5rem;
+//             padding: 1rem 0;
+//             margin-top: 1rem;
+
+//             label {
+//                 font-size: 1.5rem;
+//                 cursor: pointer;
+//                 color: $light-color;
+//             }
+
+//             a {
+//                 font-size: 1.5rem;
+//                 color: $light-color;
+//                 margin-left: auto;
+
+//                 &:hover {
+//                     color: $bright;
+//                 }
+//             }
+
+//         }
+
+//         input[type="submit"] {
+//             background: $black;
+//             color: $white;
+
+//             &:hover {
+//                 background: $bright;
+
+//             }
+//         }
+
+//         .btn {
+//             width: 100%;
+//         }
+//     }
+// }
+
+
 .blogs .box-container {
     display: grid;
     // @include grid(58rem);
@@ -299,10 +410,18 @@ section {
         .content {
             padding: 2rem;
 
-            h3 {
-                font-size: 2rem;
+            h1 {
+                font-size: 2.5rem;
                 color: $black;
-                line-height: 2;
+                padding-bottom: 15px;
+            }
+
+            h2 {
+                padding-top: 6px;
+                padding-bottom: 10px;
+                font-size: 1.4rem;
+                color: $black;
+                text-align: start;
             }
 
             p {
@@ -339,108 +458,10 @@ section {
     }
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-
-    .info {
-        padding-left: 7px;
-    }
-
-    .map {
-        flex: 1 1 42rem;
-        width: 100%;
-
-    }
-}
-
-.login-form,
-.register-form {
-    form {
-        margin: 1rem auto;
-        max-width: 40rem;
-        border-radius: .5rem;
-        border: $border;
-        padding: 2rem;
-        text-align: center;
-
-        h3 {
-            font-size: 2.2rem;
-            text-transform: uppercase;
-            color: $black;
-        }
-
-        .inputBox {
-            margin: 1rem 0;
-            display: flex;
-            border-radius: .5rem;
-            background: $light-bg;
-            padding: .5rem 1rem;
-            align-items: center;
-            gap: 1rem;
-
-            span {
-                color: $light-color;
-                margin-left: 1rem;
-                font-size: 2rem;
-            }
-
-            input {
-                width: 100%;
-                padding: 1rem;
-                background: none;
-                font-size: 1.5rem;
-                color: $light-color;
-
-            }
-        }
-
-        .flex {
-            display: flex;
-            align-items: center;
-            gap: .5rem;
-            padding: 1rem 0;
-            margin-top: 1rem;
-
-            label {
-                font-size: 1.5rem;
-                cursor: pointer;
-                color: $light-color;
-            }
-
-            a {
-                font-size: 1.5rem;
-                color: $light-color;
-                margin-left: auto;
-
-                &:hover {
-                    color: $bright;
-                }
-            }
-
-        }
-
-        input[type="submit"] {
-            background: $black;
-            color: $white;
-
-            &:hover {
-                background: $bright;
-
-            }
-        }
-
-        .btn {
-            width: 100%;
-        }
-    }
-}
-
-.blogs  .box {
+.blogs .box {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
+
     border-radius: .5rem;
     overflow: hidden;
     border: $border;
@@ -464,19 +485,33 @@ section {
     .content {
         padding: 1rem;
 
-        h3 {
-            font-style: normal;
+        h1 {
+            font-size: 2.5rem;
+            color: $black;
+            padding-bottom: 5px;
+        }
+
+        h2 {
+            padding-top: 6px;
+            padding-bottom: 10px;
             font-size: 2rem;
             color: $black;
-            line-height: 2;
+            text-align: start;
+        }
+
+        h3 {
+            padding-top: 6px;
+            padding-bottom: 10px;
+            font-size: 1.4rem;
+            color: $black;
+            text-align: start;
         }
 
         p {
-            font-style: normal;
             font-size: 1.4rem;
+            line-height: 2.5;
             color: $light-color;
             padding: 1rem 0;
-            font-style: normal;
         }
 
         .icons {
@@ -508,21 +543,20 @@ section {
 
 .blog {
     .box-container {
-        grid-row-gap: 2px ;
-
+        grid-row-gap: 2px;
+        max-width: 1100px;
         margin: 0 auto;
         padding-top: 1rem;
-        
-        grid-row-gap: 2px ;
+        grid-row-gap: 2px;
 
 
         .box {
             display: grid;
             grid-template-rows: 1fr 2fr 1fr;
-            
+
             .image {
                 margin: 0 auto;
-                width: 50%;
+                width: 30%;
                 height: auto;
                 overflow: hidden;
 
@@ -536,27 +570,57 @@ section {
             .content {
                 align-items: center;
 
-                h2 {
-
+                h1 {
+                    font-size: 2.5rem;
+                    color: $black;
+                    padding-top: 30px;
                     text-align: center;
-                    font-style: normal;
-                    font-size: 2rem;
-                    color: $bright;
+                }
 
+                h2 {
+                    padding-top: 6px;
+                    padding-bottom: 10px;
+                    font-size: 2rem;
+                    color: $black;
+                    text-align: center;
+                }
+
+                h3 {
+                    padding-top: 6px;
+                    padding-bottom: 10px;
+                    font-size: 1.6rem;
+                    color: $black;
+                    text-align: start;
                 }
 
                 p {
-
-                    font-style: normal;
                     font-size: 1.4rem;
+                    line-height: 2.5;
                     color: $light-color;
                     padding: 1rem 0;
                 }
 
-                li {
-                    font-size: 1.4rem;
-                    font-style: normal;
-                    padding: 1rem 0;
+                ul {
+                    list-style: disc;
+                    list-style-position: inside;
+
+                    li {
+                        font-size: 1.4rem;
+                        font-style: normal;
+                        padding: 0.7rem 0;
+                    }
+                }
+
+                ol {
+                    list-style: numbers;
+                    list-style-position: inside;
+
+                    li {
+                        font-size: 1.4rem;
+                        font-style: normal;
+                        padding: 0.7rem 0;
+
+                    }
                 }
 
                 .icons {
@@ -589,12 +653,7 @@ section {
 
 
 
-p {
-    font-size: 1.4rem;
-    color: $light-color;
-    padding: 1rem 0;
-    font-style: normal;
-}
+
 
 
 
@@ -687,7 +746,6 @@ p {
 
 
 
-
 @media (max-width:1200px) {
     html {
         font-size: 55%;
@@ -703,43 +761,18 @@ p {
 }
 
 
-// @media (max-width:768px) {
-//     #menu-btn {
-//       display: inline-block;
-//     }
+@media (max-width:768px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
 
-//     .header {
-//         padding: 2rem;
+    .menu-mobile {
+        position: absolute;
+        right: 12px;
+    }
 
-//         .navbar {
-//             position: absolute;
-//             top: 99%;
-//             left: 0;
-//             right: 0;
-//             background: $white;
-//             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-
-//             &.active {
-//                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-//             }
-
-//             ul li {
-//                 width: 100%;
-
-//                 ul {
-//                     position: relative;
-//                     width: 100%;
-
-//                     li a {
-//                         padding-left: 4rem;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-
-
-// }
+}
 
 @media (max-width:450px) {
     html {
@@ -756,10 +789,6 @@ p {
     }
 }
 
-// .banner {
-//     display: flex;
-//     flex-direction: column;
-// }
 @media (max-width:540px) {
     .blogs .box {
         display: flex;

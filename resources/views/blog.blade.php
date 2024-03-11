@@ -15,7 +15,7 @@
                     <img src="{{asset('/storage/'.$blog->picture)}}" alt="картинка блога">
                 </div>
                 <div class="content">
-                    <h1 class="text-center normal-case text-5xl pt-10">{{$blog->name}}</h1>
+                    <h1>{{$blog->name}}</h1>
                     <h2>{!!$blog->description!!}</h2>
                     <a href="{{asset('blog/'.$blog->id)}}" class="btn btn mt-4 text-2xl border-2 border-gray-400 hover:border-green-400">Подробней</a>
                     <div class="icons">

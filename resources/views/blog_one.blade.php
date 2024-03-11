@@ -9,7 +9,7 @@
                 <img src="{{asset('/storage/'.$blog->picture)}}" alt="">
             </div>
             <div class="content">
-                <h1 class="text-center normal-case text-5xl pt-10">{{$blog->name}}</h1>
+                <h1>{{$blog->name}}</h1>
                 <h2>{!!$blog->description!!}</h2>
                 <p>{!!$blog->content!!}</p>
                 <div class="icons">

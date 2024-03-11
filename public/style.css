@@ -7,6 +7,7 @@
   text-decoration: none;
   outline: none;
   border: none;
+  transition: all 0.2s linear;
 }
 
 html {
@@ -15,8 +16,17 @@ html {
   overflow-x: hidden;
 }
 
+p {
+  font-size: 1.4rem;
+  line-height: 2.5;
+  color: #909090;
+  padding: 1rem 0;
+}
+
 section {
-  padding: 2rem 9%;
+  padding: 4rem 9%;
+  max-width: 90vw;
+  margin: 0 auto;
 }
 
 .heading {
@@ -46,6 +56,10 @@ section {
   margin-bottom: 2rem;
   text-align: center;
   padding: 0 1rem;
+}
+
+.menu {
+  display: flex;
 }
 
 .home {
@@ -213,6 +227,19 @@ section {
   color: #121212;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.row .info {
+  padding-left: 7px;
+}
+.row .map {
+  flex: 1 1 42rem;
+  width: 100%;
+}
+
 .blogs .box-container {
   display: grid;
 }
@@ -238,10 +265,17 @@ section {
 .blogs .box-container .box .content {
   padding: 2rem;
 }
-.blogs .box-container .box .content h3 {
-  font-size: 2rem;
+.blogs .box-container .box .content h1 {
+  font-size: 2.5rem;
   color: #121212;
-  line-height: 2;
+  padding-bottom: 15px;
+}
+.blogs .box-container .box .content h2 {
+  padding-top: 6px;
+  padding-bottom: 10px;
+  font-size: 1.4rem;
+  color: #121212;
+  text-align: start;
 }
 .blogs .box-container .box .content p {
   font-size: 1.4rem;
@@ -269,96 +303,6 @@ section {
   color: #97FB57;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-.row .info {
-  padding-left: 7px;
-}
-.row .map {
-  flex: 1 1 42rem;
-  width: 100%;
-}
-
-.login-form form,
-.register-form form {
-  margin: 1rem auto;
-  max-width: 40rem;
-  border-radius: 0.5rem;
-  border: 0.1rem solid #121212;
-  padding: 2rem;
-  text-align: center;
-}
-.login-form form h3,
-.register-form form h3 {
-  font-size: 2.2rem;
-  text-transform: uppercase;
-  color: #121212;
-}
-.login-form form .inputBox,
-.register-form form .inputBox {
-  margin: 1rem 0;
-  display: flex;
-  border-radius: 0.5rem;
-  background: #eee;
-  padding: 0.5rem 1rem;
-  align-items: center;
-  gap: 1rem;
-}
-.login-form form .inputBox span,
-.register-form form .inputBox span {
-  color: #909090;
-  margin-left: 1rem;
-  font-size: 2rem;
-}
-.login-form form .inputBox input,
-.register-form form .inputBox input {
-  width: 100%;
-  padding: 1rem;
-  background: none;
-  font-size: 1.5rem;
-  color: #909090;
-}
-.login-form form .flex,
-.register-form form .flex {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 0;
-  margin-top: 1rem;
-}
-.login-form form .flex label,
-.register-form form .flex label {
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #909090;
-}
-.login-form form .flex a,
-.register-form form .flex a {
-  font-size: 1.5rem;
-  color: #909090;
-  margin-left: auto;
-}
-.login-form form .flex a:hover,
-.register-form form .flex a:hover {
-  color: #97FB57;
-}
-.login-form form input[type=submit],
-.register-form form input[type=submit] {
-  background: #121212;
-  color: #fff;
-}
-.login-form form input[type=submit]:hover,
-.register-form form input[type=submit]:hover {
-  background: #97FB57;
-}
-.login-form form .btn,
-.register-form form .btn {
-  width: 100%;
-}
-
 .blogs .box {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -383,18 +327,30 @@ section {
 .blogs .box .content {
   padding: 1rem;
 }
-.blogs .box .content h3 {
-  font-style: normal;
+.blogs .box .content h1 {
+  font-size: 2.5rem;
+  color: #121212;
+  padding-bottom: 5px;
+}
+.blogs .box .content h2 {
+  padding-top: 6px;
+  padding-bottom: 10px;
   font-size: 2rem;
   color: #121212;
-  line-height: 2;
+  text-align: start;
+}
+.blogs .box .content h3 {
+  padding-top: 6px;
+  padding-bottom: 10px;
+  font-size: 1.4rem;
+  color: #121212;
+  text-align: start;
 }
 .blogs .box .content p {
-  font-style: normal;
   font-size: 1.4rem;
+  line-height: 2.5;
   color: #909090;
   padding: 1rem 0;
-  font-style: normal;
 }
 .blogs .box .content .icons {
   border-top: 0.1rem solid #121212;
@@ -418,6 +374,7 @@ section {
 
 .blog .box-container {
   grid-row-gap: 2px;
+  max-width: 1100px;
   margin: 0 auto;
   padding-top: 1rem;
   grid-row-gap: 2px;
@@ -428,7 +385,7 @@ section {
 }
 .blog .box-container .box .image {
   margin: 0 auto;
-  width: 50%;
+  width: 30%;
   height: auto;
   overflow: hidden;
 }
@@ -441,22 +398,49 @@ section {
 .blog .box-container .box .content {
   align-items: center;
 }
-.blog .box-container .box .content h2 {
+.blog .box-container .box .content h1 {
+  font-size: 2.5rem;
+  color: #121212;
+  padding-top: 30px;
   text-align: center;
-  font-style: normal;
+}
+.blog .box-container .box .content h2 {
+  padding-top: 6px;
+  padding-bottom: 10px;
   font-size: 2rem;
-  color: #97FB57;
+  color: #121212;
+  text-align: center;
+}
+.blog .box-container .box .content h3 {
+  padding-top: 6px;
+  padding-bottom: 10px;
+  font-size: 1.6rem;
+  color: #121212;
+  text-align: start;
 }
 .blog .box-container .box .content p {
-  font-style: normal;
   font-size: 1.4rem;
+  line-height: 2.5;
   color: #909090;
   padding: 1rem 0;
 }
-.blog .box-container .box .content li {
+.blog .box-container .box .content ul {
+  list-style: disc;
+  list-style-position: inside;
+}
+.blog .box-container .box .content ul li {
   font-size: 1.4rem;
   font-style: normal;
-  padding: 1rem 0;
+  padding: 0.7rem 0;
+}
+.blog .box-container .box .content ol {
+  list-style: numbers;
+  list-style-position: inside;
+}
+.blog .box-container .box .content ol li {
+  font-size: 1.4rem;
+  font-style: normal;
+  padding: 0.7rem 0;
 }
 .blog .box-container .box .content .icons {
   border-top: 0.1rem solid #121212;
@@ -476,13 +460,6 @@ section {
 .blog .box-container .box .content .icons a i {
   padding-right: 0.5rem;
   color: #97FB57;
-}
-
-p {
-  font-size: 1.4rem;
-  color: #909090;
-  padding: 1rem 0;
-  font-style: normal;
 }
 
 .footer .box-container {
@@ -548,6 +525,16 @@ p {
   }
   section {
     padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-mobile {
+    position: absolute;
+    right: 12px;
   }
 }
 @media (max-width: 450px) {
