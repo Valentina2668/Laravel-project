@@ -42,7 +42,7 @@
         <img src="images/banner-1.png" class="h-auto max-w-full object-cover hover:scale-110">
         <h3 class="bg-transparent text-5xl text-white pb-10 absolute top-6 right-3 normal-case">Новые поступления</h3>
         <button class="absolute top-24 right-3 bg-orange-50 text-3xl text-gray-900 py-3 px-10 rounded-lg border-1 border-gray-600 hover:border-green-600">
-            <a href="/feed">Купить</a>
+            <a href="/products?catalog=4">Купить</a>
         </button>
     </div>
     <div class="relative overflow-hidden h-400">

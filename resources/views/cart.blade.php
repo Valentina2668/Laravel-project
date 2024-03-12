@@ -45,21 +45,21 @@
                                     <div class="col-md-2 col-lg-2 col-xl-2">
                                         <img src="/storage/{{$product->picture}}" class="img-fluid rounded-3" alt="Cotton T-shirt">
                                     </div>
-                                    <div class="col-md-3 col-lg-3 col-xl-3">
+                                    <div class="col-md-2 col-lg-2 col-xl-2">
                                         <p class="lead fw-normal mb-2">{{$product->name}}</p>
                                         <span class="text-muted">Size:{{$sizes[$product->id]}} </span>
                                     </div>
                                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                                         <a href="{{asset('cart/delete/' .$product->id)}}" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
                                     </div>
-                                    <div class="col-md-3 col-lg-3 col-xl-2 d-flex p-10">
+                                    <div class="col-md-2 col-lg-2 col-xl-2 d-flex p-10">
                                         <button class="btn btn-link px-2" @click.prevent="count{{$product->id}}--;
                                         await change_count_{{$product->id}}();
                                         itogo_func();">
                                             <i class="fas fa-minus"></i>
                                         </button>
 
-                                        <input type="number" value="1" min="1" max="1000" id="product{{$product->id}}" @change="change_count_{{$product->id}}(); itogo_func()" x-model="count{{$product->id}}" autocomplete="off" name="product_{{$product->id}}" class="form-control form-control-sm" />
+                                        <input type="number" value="1" min="1" max="1000" id="product{{$product->id}}" @change="change_count_{{$product->id}}(); itogo_func()" x-model="count{{$product->id}}" autocomplete="off" name="product_{{$product->id}}" class="form-control form-control-sm text-center" />
 
                                         <button class="btn btn-link px-2" @click.prevent="count{{$product->id}}++;
                                         await change_count_{{$product->id}}();
@@ -67,7 +67,7 @@
                                             <i class=" fas fa-plus"></i>
                                         </button>
                                     </div>
-                                    <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                                    <div class="col-md-2 col-lg-2 col-xl-2 offset-lg-1">
                                         <h5 class="mb-0" x-text="summa{{$product->id}}"></h5>
                                     </div>
                                     
