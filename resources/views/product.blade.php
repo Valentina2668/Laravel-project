@@ -8,7 +8,6 @@
 <section class="text-gray-600 body-font overflow-hidden">
     <form action="{{asset('add_cart/'.$product->id)}}">
         <div class="container px-5 pt-1 mx-auto">
-            <a href="/products" class=" text-black bg-white border-1 py-2 px-6  hover:bg-green cursor-pointer rounded"> назад </a>
             <div class="lg:w-4/5 mx-auto flex flex-wrap">
                 <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto object-fitt object-center rounded" src="/storage/{{$product->picture}}">
 

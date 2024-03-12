@@ -17,7 +17,8 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\FileUpload;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
-
+use Filament\Forms\Components\Select;
+use App\Models\User;
 
 
 class BlogResource extends Resource
@@ -28,8 +29,11 @@ class BlogResource extends Resource
 
     public static function form(Form $form): Form
     {
+
+        $users=User::orderBy('email')->pluck('email', 'id')->toArray();
         return $form
             ->schema([
+                Select::make('user_id')->options($users)->required(),//сделали поле catalog id айди и добавили options из модели Cdtdlog
                 TextInput::make('name')->required(),
                 RichEditor::make('description')->columnSpan('full'),
                 RichEditor::make('content')->columnSpan('full'),

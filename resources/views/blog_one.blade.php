@@ -2,7 +2,10 @@
 @section('content')
 <section class="blog">
     <!-- <h1 class="title">our daily posts</h1> -->
-    <a href="/blog" class="btn btn mt-4 text-2xl border-2 border-gray-400 hover:border-green-400">Назад</a>
+    <section class="heading">
+        <h1>Блог</h1>
+        <p><a href="/"> Главная</a> > <a href="/blog"> Блог</a> > Статья блога</p>
+    </section>
     <div class="box-container">
         <div class="box">
             <div class="image">
