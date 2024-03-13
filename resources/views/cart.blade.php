@@ -9,7 +9,7 @@
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-10">
                     <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h3 class="fw-normal mb-0 text-black">Shopping Cart</h3>
+                        <h3 class="fw-normal mb-0 text-black">Корзина</h3>
                         <!-- <div>
                             <p class="mb-0"><span class="text-muted">Sort by:</span> <a href="#!" class="text-body">price <i class="fas fa-angle-down mt-1"></i></a></p>
                         </div> -->
@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="col-md-2 col-lg-2 col-xl-2">
                                         <p class="lead fw-normal mb-2">{{$product->name}}</p>
-                                        <span class="text-muted">Size:{{$sizes[$product->id]}} </span>
+                                        <span class="text-muted">Размер: {{$sizes[$product->id]}} </span>
                                     </div>
                                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                                         <a href="{{asset('cart/delete/' .$product->id)}}" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
@@ -83,7 +83,7 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <button type="submit" class="btn btn-warning btn-block btn-lg">Proceed to Order</button>
+                            <button type="submit" class="btn btn-warning btn-block btn-lg">Продолжить</button>
                         </div>
                     </div>
 

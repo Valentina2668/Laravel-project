@@ -9,7 +9,7 @@
     <form action="{{asset('add_cart/'.$product->id)}}">
         <div class="container px-5 pt-1 mx-auto">
             <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto object-fitt object-center rounded" src="/storage/{{$product->picture}}">
+                <img alt="ecommerce" class="xl:w-1/2 w-full md:h-auto object-fitt object-center rounded" src="/storage/{{$product->picture}}">
 
                 <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                     <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{{$product->name}}</h1>

@@ -12,7 +12,7 @@ class ProductFilter extends ModelFilter
     }
     public function priceMin($value)
     {
-        return $this->where('price', '>', $value);
+        return $this->where('price', '>=', $value);
     }
     public function priceMax($value)
     {

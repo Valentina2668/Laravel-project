@@ -23,9 +23,9 @@
         <input type="hidden" name="product[{{$product->id}}]" value="{{$prod_count[$product->id]}}">
         <table class="table w-full mt-10 mb-10">
             <tr class="p-2 text-lg ">
-                <td class="table-cell text-left">Name {{$product->name}}</td>
-                <td class="table-cell text-center">Count {{$prod_count[$product->id]}}</td>
-                <td class="table-cell text-right">Summa {{$summa}}</td>
+                <td class="table-cell text-left">Наименование: {{$product->name}}</td>
+                <td class="table-cell text-center">Количество: {{$prod_count[$product->id]}}</td>
+                <td class="table-cell text-right">Сумма: {{$summa}}</td>
             </tr>
         </table>
 
@@ -37,9 +37,23 @@
             <span>Итого </span>
             <span>{{$itogo}}</span>
         </div>
-
-
-        <div class="grid lg:grid-cols-2 mt-15 md:grid-cols-1 sm:grid-cols-1" >
+        <div class="pb-20 pt-20 text-lg">
+            <h2>Выберите способ доставки </h2>
+            <ul>
+                <li class="pt-2 ">
+                    <input type="radio" name="name" id="one" checked />
+                    <label for="one">Самовывоз</label>
+                    <div class="check"></div>
+                </li>
+                <li class="pt-2">
+                    <input type="radio" name="name" id="two"/>
+                    <label for="two">Доставка курьером</label>
+                    <div class="check"></div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 mt-15 md:grid-cols-1 sm:grid-cols-1">
             <div class="p-6 border-1 border-gray-800 dark:border-gray-200 md:border-l flex flex-col">
                 <label for="name" class="block">
                     <span class="text-gray-700">Имя</span>
