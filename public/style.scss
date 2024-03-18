@@ -42,8 +42,8 @@ p {
 
 
 section {
-    padding: 4rem 9%;
-    max-width: 90vw;
+    padding: 2rem 9%;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -143,7 +143,7 @@ section {
     }
 
     .box-container {
-        @include grid(26rem);
+        @include grid(19rem);
 
 
         .box {
@@ -208,6 +208,10 @@ section {
 }
 
 .about {
+    .title {
+        padding: 1rem;
+    }
+
     .row {
         display: flex;
         align-items: center;
@@ -220,7 +224,6 @@ section {
             img {
                 width: 100%;
                 border-radius: .5rem;
-
             }
         }
 
@@ -228,7 +231,7 @@ section {
             flex: 1 1 42rem;
 
             h3 {
-                font-style: normal;
+                text-align: center;
                 font-size: 2.5rem;
                 color: $black;
                 line-height: 1;
@@ -283,17 +286,31 @@ section {
     }
 }
 
-.row {
+.contact {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+    max-width: 90vw;
 
     .info {
-        padding-left: 7px;
+        h3 {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: small;
+            font-style: normal;
+            line-height: 1.5;
+            color: $light-color;
+            padding: 1rem 0;
+        }
     }
 
     .map {
-        flex: 1 1 42rem;
+        
+        border-radius: .5rem;
         width: 100%;
 
     }
@@ -749,16 +766,23 @@ section {
     }
 
 }
+
 @media (max-width:540px) {
     .blogs .box {
         display: flex;
         flex-direction: column;
     }
+
     .products {
         display: flex;
         flex-direction: column;
     }
+    .contact{
+        display: flex;
+        flex-direction: column;
+    }
 }
+
 @media (max-width:450px) {
     html {
         font-size: 50%;
@@ -768,6 +792,5 @@ section {
         font-size: 4rem;
     }
 
-    
-}
 
+}

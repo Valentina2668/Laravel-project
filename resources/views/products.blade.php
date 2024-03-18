@@ -41,7 +41,7 @@
                         <span class="text-xl">Обычная цена {{$product->price}}</span>
                     </div>
                     <div class="flex ml-6 items-center">
-                        <span class="mr-3">Size</span>
+                        <span class="mr-3">Размер</span>
                         <div class="relative">
                             <select name="size" class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
                                 @foreach(explode(',',$product->size) as $one)

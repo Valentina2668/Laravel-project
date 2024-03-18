@@ -24,8 +24,8 @@ p {
 }
 
 section {
-  padding: 4rem 9%;
-  max-width: 90vw;
+  padding: 2rem 9%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -116,7 +116,7 @@ section {
 }
 .products .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
   gap: 1.5rem;
 }
 .products .box-container .box {
@@ -167,6 +167,9 @@ section {
   color: #121212;
 }
 
+.about .title {
+  padding: 1rem;
+}
 .about .row {
   display: flex;
   align-items: center;
@@ -184,7 +187,7 @@ section {
   flex: 1 1 42rem;
 }
 .about .row .content h3 {
-  font-style: normal;
+  text-align: center;
   font-size: 2.5rem;
   color: #121212;
   line-height: 1;
@@ -227,16 +230,26 @@ section {
   color: #121212;
 }
 
-.row {
+.contact {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+  max-width: 90vw;
 }
-.row .info {
-  padding-left: 7px;
+.contact .info h3 {
+  text-align: center;
+  font-size: 2rem;
 }
-.row .map {
-  flex: 1 1 42rem;
+.contact .info p {
+  font-size: small;
+  font-style: normal;
+  line-height: 1.5;
+  color: #909090;
+  padding: 1rem 0;
+}
+.contact .map {
+  border-radius: 0.5rem;
   width: 100%;
 }
 
@@ -543,6 +556,10 @@ section {
     flex-direction: column;
   }
   .products {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact {
     display: flex;
     flex-direction: column;
   }

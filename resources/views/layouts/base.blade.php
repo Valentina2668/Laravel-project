@@ -67,7 +67,7 @@
                             <p class="block py-2 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> Контакты</p>
                         </x-nav-link></li>
 
-                    <li>
+                    
                         @if(auth()->guest())
                     <li class="pt-1"><x-nav-link href="/login">
                             <p class="block py-2 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> Войти</p>
@@ -77,17 +77,17 @@
                             <p>
                         </x-nav-link></li>
                     @else
-                    <li>
+                    <li class="pt-1">
                         <x-nav-link href="{{asset('dashboard')}}">
-                            <p class="block py-3 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> {{ __('Профиль') }}</p>
+                            <p class="block px-2 pt-2 md:pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> {{ __('Профиль') }}</p>
                         </x-nav-link>
-                    <li>
+                    <li class="pt-1">
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <x-nav-link :href="route('logout')" onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                <p class="block py-3 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> {{ __('Выйти') }}</p>
+                                <p class="block px-2 pt-2 md:pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> {{ __('Выйти') }}</p>
                             </x-nav-link>
                         </form>
                     </li>
@@ -169,9 +169,13 @@
                 <a href="/policy"><i class="fas fa-angle-right"></i> privacy policy </a>
             </div>
             <div class="box">
-                <h3 class="pb-6 normal-case">Время работы</h3>
-                <p class="pb-6">Пн-Пт: <br>10:00-20:00</p>
-                <p class="pb-6">Сб-Вс: <br>12:00-20:00</p>
+                <h3 class="pb-1">Время работы</h3>
+                <p>Пн-Пт: <br>10:00-20:00</p>
+                <p>Сб-Вс: <br>12:00-20:00</p>
+            </div>
+            <div class="box">
+                <h3 class="pb-1">Наш адрес</h3>
+                <p>ул. Петра Мстиславца, 20</p>
             </div>
             <div class="box">
                 <h3 class="normal-case">Подписывайся на нас</h3>
@@ -187,7 +191,7 @@
                 <p class="normal-case">Подпишись на обновления</p>
                 <form action="">
                     <input type="email" placeholder="Введите адрес электронной почты">
-                    <input type="submit" value="subscribe" class=" mt-3 py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-green-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                    <input type="submit" value="subscribe" class=" mt-3 py-2.5 px-5 me-2 mb-2 text-md font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-green-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
 
                 </form>
             </div>
