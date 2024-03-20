@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
+use App\Http\Controllers\SubscribeController;
 
 
 /*
@@ -16,7 +17,8 @@ use App\Http\Controllers;
 |
 */
 Route::get('feed', [Controllers\FeedController::class, 'getIndex']);
-
+Route::post('/subscribe', [Controllers\SubscribeController::class, 'post']);
+Route::get('/subscribe/{hash}', [Controllers\SubscribeController::class, 'verify'])->name('subscribe.confirm');
 Route::get('/', function () {
     return view('welcome');
 });
@@ -48,5 +50,6 @@ Route::get('cart',[Controllers\OrderController::class, 'cart'])->name('cart');
 Route::get('cart/delete/{product}', [Controllers\OrderController::class,'cartDelete']);
 Route::get('form_order', [Controllers\OrderController::class, 'formOrder']);
 Route::post('cart/form_save', [Controllers\OrderController::class, 'formSave']);
+
 Route::get('{url}', [Controllers\BaseController::class, 'getIndex']); //вот этот путь всегда в конце последней строчкой. 
 

@@ -1,3 +1,6 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 @extends('layouts.base')
 @section('content')
 <section>
@@ -13,7 +16,11 @@
         @php
         $itogo=0;
         @endphp
-
+        <table class="table table-striped">
+            <th class="w-2/4">Наименование</th>
+            <th class="w-1/4 text-center">Количество</th>
+            <th class="w-1/4 text-right">Цена</th>
+        </table>
         @foreach ($prod_arr as $product)
 
         @php
@@ -21,18 +28,14 @@
         $itogo += $summa;
         @endphp
         <input type="hidden" name="product[{{$product->id}}]" value="{{$prod_count[$product->id]}}">
-        <table class="table w-full mt-10 mb-10">
-            <tr class="p-2 text-lg ">
-                <td class="table-cell text-left">Наименование: {{$product->name}}</td>
-                <td class="table-cell text-center">Количество: {{$prod_count[$product->id]}}</td>
-                <td class="table-cell text-right">Сумма: {{$summa}}</td>
+        <table class="table table-striped">
+            <tr>
+                <td class="w-2/4">{{$product->name}}</td>
+                <td class="w-1/4 text-center">{{$prod_count[$product->id]}}</td>
+                <td class="w-1/4 text-right">{{$summa}}</td>
             </tr>
+            @endforeach
         </table>
-
-
-
-        @endforeach
-
         <div class="pb-20 pt-20 text-lg">
             <span>Итого </span>
             <span>{{$itogo}}</span>
@@ -46,13 +49,13 @@
                     <div class="check"></div>
                 </li>
                 <li class="pt-2">
-                    <input type="radio" name="name" id="two"/>
+                    <input type="radio" name="name" id="two" />
                     <label for="two">Доставка курьером</label>
                     <div class="check"></div>
                 </li>
             </ul>
         </div>
-        
+
         <div class="grid lg:grid-cols-2 mt-15 md:grid-cols-1 sm:grid-cols-1">
             <div class="p-6 border-1 border-gray-800 dark:border-gray-200 md:border-l flex flex-col">
                 <label for="name" class="block">

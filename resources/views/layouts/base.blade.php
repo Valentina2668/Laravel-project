@@ -67,8 +67,8 @@
                             <p class="block py-2 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> Контакты</p>
                         </x-nav-link></li>
 
-                    
-                        @if(auth()->guest())
+
+                    @if(auth()->guest())
                     <li class="pt-1"><x-nav-link href="/login">
                             <p class="block py-2 pl-3 pr-4 text-xl text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> Войти</p>
                         </x-nav-link></li>
@@ -189,8 +189,9 @@
             <div class="box">
                 <h3 class="normal-case">Рассылка</h3>
                 <p class="normal-case">Подпишись на обновления</p>
-                <form action="">
-                    <input type="email" placeholder="Введите адрес электронной почты">
+                <form action="{{asset('subscribe')}}" method="post">
+                @csrf
+                    <input type="email" name="email" placeholder="Введите адрес электронной почты">
                     <input type="submit" value="subscribe" class=" mt-3 py-2.5 px-5 me-2 mb-2 text-md font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-green-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
 
                 </form>
