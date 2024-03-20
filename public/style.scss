@@ -34,8 +34,7 @@ html {
 }
 
 p {
-    font-size: 1.4rem;
-    line-height: 2.5;
+    font-size: 1.3rem;
     color: $light-color;
     padding: 1rem 0;
 }
@@ -168,6 +167,7 @@ section {
                     top: 0;
                     left: 0;
                     right: 0;
+                    padding-top: 5px;
                     border-bottom: $border;
                     transform: translateY(-7rem);
 
@@ -198,7 +198,92 @@ section {
                 padding: 1.5rem 0;
 
                 h3 {
-                    font-size: 2rem;
+                    font-size: 1.5rem;
+                    color: $black;
+                }
+
+            }
+        }
+    }
+}
+
+.product-one {
+    display: flex;
+    flex-wrap: nowrap;
+
+    h1 {
+        font-size: 2.5rem;
+        color: $black;
+        padding-top: 15px;
+
+    }
+
+    .content {
+        padding-left: 10px;
+    }
+}
+
+.favorites {
+    display: grid;
+
+    .box-container {
+        @include grid(19rem);
+
+
+        .box {
+            border-radius: .5rem;
+            text-align: center;
+            border: $border;
+
+
+            &:hover .image .icons {
+                transform: translateY(0);
+            }
+
+            .image {
+                overflow: hidden;
+                position: relative;
+                height: 20rem;
+                width: 100%;
+
+                .icons {
+                    background-color: #fff;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    padding-top: 5px;
+                    border-bottom: $border;
+                    transform: translateY(-7rem);
+
+                    a {
+                        height: 5rem;
+                        width: 5rem;
+                        line-height: 5rem;
+                        font-size: 2rem;
+                        color: $black;
+
+                        &:hover {
+                            background: $black;
+                            color: $white;
+
+                        }
+                    }
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+            }
+
+            .content {
+                padding: 1.5rem 0;
+
+                h3 {
+                    font-size: 1.5rem;
                     color: $black;
                 }
 
@@ -232,15 +317,13 @@ section {
 
             h3 {
                 text-align: center;
-                font-size: 2.5rem;
+                font-size: 1.5rem;
                 color: $black;
-                line-height: 1;
             }
 
             p {
                 font-size: small;
                 font-style: normal;
-                line-height: 1.5;
                 color: $light-color;
                 padding: 1rem 0;
             }
@@ -279,7 +362,7 @@ section {
             }
 
             h3 {
-                font-size: 1.7rem;
+                font-size: 1.5rem;
                 color: $black;
             }
         }
@@ -296,112 +379,27 @@ section {
     .info {
         h3 {
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
 
         p {
-            font-size: small;
-            font-style: normal;
-            line-height: 1.5;
+            font-size: 1.3rem;
             color: $light-color;
             padding: 1rem 0;
         }
     }
 
     .map {
-        
+
         border-radius: .5rem;
         width: 100%;
 
     }
 }
 
-// .login-form,
-// .register-form {
-//     form {
-//         margin: 1rem auto;
-//         max-width: 40rem;
-//         border-radius: .5rem;
-//         border: $border;
-//         padding: 2rem;
-//         text-align: center;
-
-//         h3 {
-//             font-size: 2.2rem;
-//             text-transform: uppercase;
-//             color: $black;
-//         }
-
-//         .inputBox {
-//             margin: 1rem 0;
-//             display: flex;
-//             border-radius: .5rem;
-//             background: $light-bg;
-//             padding: .5rem 1rem;
-//             align-items: center;
-//             gap: 1rem;
-
-//             span {
-//                 color: $light-color;
-//                 margin-left: 1rem;
-//                 font-size: 2rem;
-//             }
-
-//             input {
-//                 width: 100%;
-//                 padding: 1rem;
-//                 background: none;
-//                 font-size: 1.5rem;
-//                 color: $light-color;
-
-//             }
-//         }
-
-//         .flex {
-//             display: flex;
-//             align-items: center;
-//             gap: .5rem;
-//             padding: 1rem 0;
-//             margin-top: 1rem;
-
-//             label {
-//                 font-size: 1.5rem;
-//                 cursor: pointer;
-//                 color: $light-color;
-//             }
-
-//             a {
-//                 font-size: 1.5rem;
-//                 color: $light-color;
-//                 margin-left: auto;
-
-//                 &:hover {
-//                     color: $bright;
-//                 }
-//             }
-
-//         }
-
-//         input[type="submit"] {
-//             background: $black;
-//             color: $white;
-
-//             &:hover {
-//                 background: $bright;
-
-//             }
-//         }
-
-//         .btn {
-//             width: 100%;
-//         }
-//     }
-// }
-
-
 .blogs .box-container {
     display: grid;
-    // @include grid(58rem);
+    height: fit-content;
 
     .box {
         border-radius: .5rem;
@@ -436,14 +434,13 @@ section {
             h2 {
                 padding-top: 6px;
                 padding-bottom: 10px;
-                font-size: 1.4rem;
+                font-size: 1.7rem;
                 color: $black;
                 text-align: start;
             }
 
             p {
-                font-size: 1.4rem;
-                line-height: 2.5;
+                font-size: 1.3rem;
                 color: $light-color;
                 padding: 1rem 0;
             }
@@ -511,7 +508,7 @@ section {
         h2 {
             padding-top: 6px;
             padding-bottom: 10px;
-            font-size: 2rem;
+            font-size: 1.7rem;
             color: $black;
             text-align: start;
         }
@@ -519,14 +516,13 @@ section {
         h3 {
             padding-top: 6px;
             padding-bottom: 10px;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: $black;
             text-align: start;
         }
 
         p {
-            font-size: 1.4rem;
-            line-height: 2.5;
+            font-size: 1.3rem;
             color: $light-color;
             padding: 1rem 0;
         }
@@ -564,23 +560,19 @@ section {
         max-width: 1100px;
         margin: 0 auto;
         padding-top: 1rem;
-        grid-row-gap: 2px;
-
 
         .box {
-            display: grid;
-            grid-template-rows: 1fr 2fr 1fr;
 
             .image {
                 margin: 0 auto;
-                width: 50%;
+                width: 80vw;
                 height: auto;
                 overflow: hidden;
 
                 img {
                     height: 100%;
                     width: 100%;
-                    object-fit: cover;
+                    object-fit: fit;
                 }
             }
 
@@ -590,11 +582,11 @@ section {
                 h1 {
                     font-size: 2.5rem;
                     color: $black;
-                    padding-top: 30px;
-                    text-align: center;
+                    padding-bottom: 15px;
                 }
 
                 h2 {
+                    font-size: 1.7rem;
                     padding-top: 6px;
                     padding-bottom: 10px;
                     font-size: 2rem;
@@ -605,15 +597,14 @@ section {
                 h3 {
                     padding-top: 6px;
                     padding-bottom: 10px;
-                    font-size: 1.6rem;
+                    font-size: 1.5rem;
                     color: $black;
                     text-align: start;
                 }
 
                 p {
-                    font-size: 1.4rem;
-                    line-height: 2.5;
-                    color: $light-color;
+                    font-size: 1.3rem;
+                    color: $black;
                     padding: 1rem 0;
                 }
 
@@ -622,7 +613,7 @@ section {
                     list-style-position: inside;
 
                     li {
-                        font-size: 1.4rem;
+                        font-size: 1.3rem;
                         font-style: normal;
                         padding: 0.7rem 0;
                     }
@@ -633,7 +624,7 @@ section {
                     list-style-position: inside;
 
                     li {
-                        font-size: 1.4rem;
+                        font-size: 1.3rem;
                         font-style: normal;
                         padding: 0.7rem 0;
 
@@ -649,7 +640,7 @@ section {
                     justify-content: space-between;
 
                     a {
-                        font-size: 1.4rem;
+                        font-size: 1.3rem;
                         color: $light-color;
 
                         &:hover {
@@ -667,8 +658,6 @@ section {
         }
     }
 }
-
-
 
 .footer {
     .box-container {
@@ -703,7 +692,7 @@ section {
         }
 
         p {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: $light-color;
             margin-bottom: 1rem;
 
@@ -765,6 +754,20 @@ section {
         right: 12px;
     }
 
+    .product-one {
+        display: flex;
+        flex-wrap: wrap;
+
+        .image {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .content {
+            margin: 0 auto;
+        }
+    }
+
 }
 
 @media (max-width:540px) {
@@ -773,11 +776,14 @@ section {
         flex-direction: column;
     }
 
+
     .products {
         display: flex;
         flex-direction: column;
     }
-    .contact{
+
+
+    .contact {
         display: flex;
         flex-direction: column;
     }

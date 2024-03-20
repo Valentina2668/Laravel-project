@@ -165,8 +165,8 @@
                 <a href="#"><i class="fas fa-angle-right"></i> Мои заказы </a>
                 <a href="#"><i class="fas fa-angle-right"></i> Избранное </a>
                 @endif
-                <a href="/terms"><i class="fas fa-angle-right"></i> terms of use </a>
-                <a href="/policy"><i class="fas fa-angle-right"></i> privacy policy </a>
+                <a href="/terms"><i class="fas fa-angle-right"></i> Пользовательское соглашение </a>
+                <a href="/policy"><i class="fas fa-angle-right"></i> Политика конфиденциальности </a>
             </div>
             <div class="box">
                 <h3 class="pb-1">Время работы</h3>

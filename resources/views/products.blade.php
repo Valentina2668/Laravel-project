@@ -7,14 +7,9 @@
     <h1>Каталог</h1>
     <p><a href="/">Главная</a> > <a href={{asset('products')}}>Каталог</a></p>
 </section>
-<!-- <h1 class="title">featured products</h1> -->
 <section class="products">
     @include('includes.filters')
-
-    <!-- <section class=''>
-        <input type="range" min="23" name="price_min" max="483" x-model="price">
-    </section> -->
-    <div class="box-container">
+        <div class="box-container">
         @foreach($products as $product)
         <div class="box">
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
@@ -36,9 +31,9 @@
                     <h3>{{$product->status}}</h3>
                     <div class="flex flex-col">
                         @if($product->discount)
-                        <span class="text-2xl text-green-600"> Цена со скидкой {{$product->discount}}</span>
+                        <span class="text-2xl text-green-600"> Цена со скидкой {{$product->discount}}<span> BYN</span></span>
                         @endif
-                        <span class="text-xl">Обычная цена {{$product->price}}</span>
+                        <span class="text-xl">Обычная цена {{$product->price}}<span> BYN</span></span>
                     </div>
                     <div class="flex ml-6 items-center">
                         <span class="mr-3">Размер</span>

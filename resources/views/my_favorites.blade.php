@@ -6,8 +6,7 @@
     <p><a href="/"> Главная </a>>> <a href={{asset('products')}}> товары</a> >> избранное </p>
 </section>
 
-<section class="products">
-    <div></div>
+<section class="favorites">
     <div class="box-container">
         @foreach($favorites as $favorite)
         <div class="box">
