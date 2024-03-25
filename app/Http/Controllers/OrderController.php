@@ -12,16 +12,16 @@ class OrderController extends Controller
 {
     public function addCookie($id = null, Request $request)
     {
-        $size =':0';
-        if ($request->has('size')){
-            $size=':'.$request->size;
+        $size = ':0';
+        if ($request->has('size')) {
+            $size = ':' . $request->size;
         }
-    //    dd($request->all());
+        //    dd($request->all());
 
         $order = $_COOKIE['order'] ?? null;
         if ($order) {
             $keys = explode(',', $order);
-            $keys_id = $id . ':1'.$size;
+            $keys_id = $id . ':1' . $size;
             // explode выбрасывает , из кода, создал массив 14:1, 15:2, 35:5 
             // keys[0];
             if (in_array($keys_id, $keys)) {
@@ -31,7 +31,7 @@ class OrderController extends Controller
                 $order = implode(',', $keys);
             };
         } else {
-            $order = $id . ':1'.$size;
+            $order = $id . ':1' . $size;
         };
         setCookie('order', $order, time() + 3600, '/');
         return redirect()->back();
@@ -42,7 +42,7 @@ class OrderController extends Controller
     {
         $order_arr = [];
         $products = [];
-        $sizes=[];
+        $sizes = [];
         $itogo = 0;
         if (isset($_COOKIE['order'])) {
             $order_arr = explode(',', $_COOKIE['order']);
@@ -57,7 +57,7 @@ class OrderController extends Controller
             }
         }
         // dd($order_arr);
-        return view('cart', compact('products', 'itogo','sizes'));
+        return view('cart', compact('products', 'itogo', 'sizes'));
     }
     public function cartDelete(Product $product)
     {
@@ -89,8 +89,10 @@ class OrderController extends Controller
         }
         return view('form_order', compact('prod_arr', 'prod_count'));
     }
+
     public function formSave(OrderRequest $request)
     {
+        // dd($request->all());
         $serialize_products = serialize($request->product);
         $new_order = new Order;
         $new_order->ip_address = $request->ip();
@@ -98,12 +100,11 @@ class OrderController extends Controller
         $new_order->name = $request->name;
         $new_order->email = $request->email ?? '';
         $new_order->phone = $request->phone;
+        $new_order->delivery = $request->delivery;
         $new_order->details = $request->detales;
         $new_order->body = $serialize_products;
         $new_order->save();
         setcookie('order', '', time() - 1, '/');
-        return redirect ('thankyoupage');
+        return redirect('thankyoupage');
     }
-
-    
 }

@@ -497,7 +497,6 @@ section {
     }
 
     .content {
-        padding: 1rem;
 
         h1 {
             font-size: 2.5rem;
@@ -507,15 +506,13 @@ section {
 
         h2 {
             padding-top: 6px;
-            padding-bottom: 10px;
             font-size: 1.7rem;
             color: $black;
             text-align: start;
         }
 
         h3 {
-            padding-top: 6px;
-            padding-bottom: 10px;
+
             font-size: 1.5rem;
             color: $black;
             text-align: start;
@@ -524,7 +521,7 @@ section {
         p {
             font-size: 1.3rem;
             color: $light-color;
-            padding: 1rem 0;
+
         }
 
         .icons {
@@ -581,22 +578,21 @@ section {
 
                 h1 {
                     font-size: 2.5rem;
+                    padding-top: 10px;
+                    text-align: center;
                     color: $black;
-                    padding-bottom: 15px;
+                    padding-bottom: 5px;
                 }
 
                 h2 {
                     font-size: 1.7rem;
-                    padding-top: 6px;
-                    padding-bottom: 10px;
+                    padding-bottom: 5px;
                     font-size: 2rem;
                     color: $black;
                     text-align: center;
                 }
 
                 h3 {
-                    padding-top: 6px;
-                    padding-bottom: 10px;
                     font-size: 1.5rem;
                     color: $black;
                     text-align: start;

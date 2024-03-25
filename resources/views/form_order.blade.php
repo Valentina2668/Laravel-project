@@ -40,21 +40,24 @@
             <span>Итого </span>
             <span>{{$itogo}}</span>
         </div>
+
         <div class="pb-20 pt-20 text-lg">
             <h2>Выберите способ доставки </h2>
             <ul>
                 <li class="pt-2 ">
-                    <input type="radio" name="name" id="one" checked />
+                    <input type="radio" name="delivery" value="one" checked />
                     <label for="one">Самовывоз</label>
                     <div class="check"></div>
                 </li>
                 <li class="pt-2">
-                    <input type="radio" name="name" id="two" />
+                    <input type="radio" name="delivery" value="two" />
                     <label for="two">Доставка курьером</label>
                     <div class="check"></div>
                 </li>
             </ul>
         </div>
+
+
 
         <div class="grid lg:grid-cols-2 mt-15 md:grid-cols-1 sm:grid-cols-1">
             <div class="p-6 border-1 border-gray-800 dark:border-gray-200 md:border-l flex flex-col">
