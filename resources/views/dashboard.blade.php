@@ -6,14 +6,16 @@
     </h2>
 </x-slot>
 
-<div class="py-12">
-    <div>
-        <div class="relative">
-            <img src="./images/1676554957_catherineasquithgallery-com-p-zelenii-piksel-na-chernom-fone-113.jpg" 
-            alt="фоновое изображение" class="bg-cover w-screen h-80">
-            <div class="p-2 text-white normal-case text-7xl absolute top-16 bg-black text-center w-100">
-                {{ __("Вы успешно вошли на сайт") }}
-            </div>
+<div class="ordercontainer">
+    <div class="container">
+        <div class="image">
+            <img src="images/заказ.jpg" alt="order"/>
+        </div>
+        <div class="content">
+            <h3>Ваш успешно вошли на сайт</h3>
+            <p>
+                В своем личном кабинете Вы можете изменить свои данные
+            </p>
         </div>
     </div>
 </div>
