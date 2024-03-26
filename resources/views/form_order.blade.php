@@ -75,7 +75,7 @@
                     @endif
                     <input class="block w-full mt-1 form-input" id="email" name="email" autocomplete="off" type="email">
                 </label>
-                <label for="phone" class="hidden sm:block mt-4">
+                <label for="phone" class="sm:block mt-4">
                     <span class="text-gray-700">Телефон</span>
                     @if($errors->has('phone'))
                     {{$errors->first('phone')}}

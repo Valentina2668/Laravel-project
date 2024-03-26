@@ -7,6 +7,9 @@ use App\Models\Product;
 use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\OrderRequest;
+use App\Mail\TestEmail;
+use Illuminate\Support\Facades\Mail;
+
 
 class OrderController extends Controller
 {
@@ -106,5 +109,10 @@ class OrderController extends Controller
         $new_order->save();
         setcookie('order', '', time() - 1, '/');
         return redirect('thankyoupage');
+    }
+    public function mail()
+    {
+        $data  = ['message' => 'This is a test!'];
+        Mail::to('Valentinahc2668@mail.ru')->send(new TestEmail($data));
     }
 }

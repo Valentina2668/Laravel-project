@@ -7,7 +7,8 @@
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <!-- <meta name="description" content="спортивная обувь." />   
+    <meta name="keywords" content="купить оригинальные кроссовки адидас,  nike air минск,  кожаные , магазины, оригинал, купить мужские кроссовки в минске, купить оригинальные кроссовки, кроссовки в минске,  женскую спортивную обувь." /> -->
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->

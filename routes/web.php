@@ -19,6 +19,8 @@ use App\Http\Controllers\SubscribeController;
 Route::get('feed', [Controllers\FeedController::class, 'getIndex']);
 Route::post('/subscribe', [Controllers\SubscribeController::class, 'post']);
 Route::get('/subscribe/{hash}', [Controllers\SubscribeController::class, 'verify'])->name('subscribe.confirm');
+Route::get('mail', [Controllers\OrderController::class, 'mail']);
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -34,7 +36,7 @@ Route::middleware('auth')->group(function () {
     Route::get('product/{product}/add_to_favorites', [Controllers\FavoriteController::class, 'addProductToFavorite'])->name('add_product_to_favorite');
     Route::get('product/{product}/remove_from_favorites', [Controllers\FavoriteController::class, 'removeProductFromFavorite'])->name('remove_product_from_favorite');
     Route::get('favorites', [Controllers\FavoriteController::class, 'showMy'])->name('my_favorites');
-    
+       
 });
 
 require __DIR__ . '/auth.php';
@@ -50,6 +52,7 @@ Route::get('cart',[Controllers\OrderController::class, 'cart'])->name('cart');
 Route::get('cart/delete/{product}', [Controllers\OrderController::class,'cartDelete']);
 Route::get('form_order', [Controllers\OrderController::class, 'formOrder']);
 Route::post('cart/form_save', [Controllers\OrderController::class, 'formSave']);
+
 
 Route::get('{url}', [Controllers\BaseController::class, 'getIndex']); //вот этот путь всегда в конце последней строчкой. 
 
